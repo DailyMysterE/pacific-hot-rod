@@ -1,150 +1,98 @@
 /*
- * DESIGN: Industrial Heritage Aesthetic
- * - Split layout with image and content
- * - Racing stripe accents
- * - Feature list with chrome highlights
+ * DESIGN: Ultra-Premium Industrial Heritage
+ * - Compact split layout
+ * - Minimal feature list
+ * - Elegant service area tags
  */
 
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { CheckCircle, MapPin } from 'lucide-react';
-
-const features = [
-  'Over 20 years of restoration experience',
-  'Complete frame-off restorations',
-  'Custom paint and bodywork specialists',
-  'Hot rod and muscle car experts',
-  'State-of-the-art paint booth facility',
-  'Serving the Greater Vancouver area',
-];
+import { MapPin } from 'lucide-react';
 
 const serviceAreas = [
   'Langley', 'Surrey', 'Vancouver', 'Burnaby', 'Richmond',
-  'Coquitlam', 'New Westminster', 'Delta', 'Abbotsford',
-  'White Rock', 'Maple Ridge', 'North Vancouver',
+  'Coquitlam', 'Delta', 'Abbotsford', 'White Rock', 'Maple Ridge',
 ];
 
 export default function About() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section id="about" className="py-24 md:py-32 relative overflow-hidden">
+    <section id="about" className="py-14 md:py-20 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[oklch(0.10_0.005_250)]" />
-      
-      {/* Decorative lines */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      <div className="absolute inset-0 bg-[oklch(0.08_0.005_250)]" />
 
       <div className="container relative z-10" ref={ref}>
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image Side */}
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+          {/* Image Side - 2 cols */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7 }}
-            className="relative"
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-2 relative"
           >
-            <div className="relative">
-              {/* Main image */}
-              <div className="relative overflow-hidden">
-                <img
-                  src="/images/hero-about.jpg"
-                  alt="Pacific Hot Rod restoration facility"
-                  className="w-full aspect-[4/3] object-cover"
-                />
-                <div className="absolute inset-0 border border-primary/20" />
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <img
+                src="/images/hero-about.jpg"
+                alt="Pacific Hot Rod restoration facility"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 border border-primary/10" />
+              
+              {/* Years badge */}
+              <div className="absolute bottom-0 right-0 bg-primary px-4 py-3">
+                <div className="font-display text-2xl text-primary-foreground leading-none">20+</div>
+                <div className="text-primary-foreground/70 text-[10px] tracking-wider">YEARS</div>
               </div>
-
-              {/* Floating accent card */}
-              <div className="absolute -bottom-6 -right-6 bg-primary p-6 md:p-8 max-w-[200px]">
-                <div className="font-display text-5xl md:text-6xl text-primary-foreground">20+</div>
-                <div className="text-primary-foreground/80 text-sm mt-1">Years of Excellence</div>
-              </div>
-
-              {/* Decorative corner */}
-              <div className="absolute -top-4 -left-4 w-24 h-24 border-l-2 border-t-2 border-primary/30" />
             </div>
           </motion.div>
 
-          {/* Content Side */}
-          <div>
+          {/* Content Side - 3 cols */}
+          <div className="lg:col-span-3">
             <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.5 }}
-              className="inline-block text-primary text-sm tracking-widest mb-4"
+              className="inline-block text-primary text-[10px] tracking-[0.3em] mb-2"
             >
               ABOUT US
             </motion.span>
             
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-display text-4xl md:text-5xl lg:text-6xl mb-6"
+              className="font-display text-2xl md:text-3xl lg:text-4xl mb-4"
             >
               CRAFTSMANSHIP YOU CAN TRUST
             </motion.h2>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-foreground/70 text-lg leading-relaxed mb-8"
+              className="text-foreground/60 text-sm leading-relaxed mb-6 max-w-xl"
             >
-              Pacific Hot Rod is Langley's premier automotive restoration facility, 
-              dedicated to bringing classic cars and hot rods back to their former glory. 
-              Our team combines decades of experience with a genuine passion for vintage 
-              automobiles, ensuring every project receives the attention to detail it deserves.
+              Pacific Hot Rod is Langley's premier automotive restoration facility. 
+              Our team combines decades of experience with genuine passion for vintage 
+              automobiles. From frame-off restorations to custom paint and bodywork, 
+              we deliver exceptional results.
             </motion.p>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
+            {/* Service Areas - Compact */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-foreground/70 leading-relaxed mb-8"
+              className="flex items-start gap-3"
             >
-              From complete frame-off restorations to custom paint and bodywork, we take 
-              pride in delivering exceptional results that exceed our clients' expectations. 
-              Our state-of-the-art facility is equipped to handle projects of any scale, 
-              from minor repairs to ground-up builds.
-            </motion.p>
-
-            {/* Features */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="grid sm:grid-cols-2 gap-3 mb-10"
-            >
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground/80 text-sm">{feature}</span>
-                </div>
-              ))}
-            </motion.div>
-
-            {/* Service Areas */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="bg-[oklch(0.12_0.008_250)] border border-border p-6"
-            >
-              <div className="flex items-center gap-2 mb-4">
-                <MapPin className="w-5 h-5 text-primary" />
-                <span className="font-display text-sm tracking-wider">PROUDLY SERVING</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {serviceAreas.map((area) => (
-                  <span
-                    key={area}
-                    className="text-xs text-foreground/60 bg-[oklch(0.08_0.005_250)] px-3 py-1.5 border border-border/50"
-                  >
-                    {area}
+              <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+              <div className="flex flex-wrap gap-1.5">
+                {serviceAreas.map((area, index) => (
+                  <span key={area} className="text-[10px] text-foreground/50 tracking-wider">
+                    {area}{index < serviceAreas.length - 1 && <span className="text-primary/40 ml-1.5">•</span>}
                   </span>
                 ))}
               </div>

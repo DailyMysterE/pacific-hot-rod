@@ -1,31 +1,24 @@
 /*
- * DESIGN: Industrial Heritage Aesthetic
- * - Full-viewport hero with dramatic automotive imagery
- * - Asymmetric layout with overlapping elements
- * - Racing amber accents and chrome highlights
- * - Heavy, mechanical entrance animations
+ * DESIGN: Ultra-Premium Industrial Heritage
+ * - Compact hero that doesn't require excessive scrolling
+ * - Refined typography and spacing
+ * - Elegant stats bar
  */
 
 import { motion } from 'framer-motion';
-import { ChevronDown, Wrench, Award } from 'lucide-react';
+import { Wrench } from 'lucide-react';
 
 export default function Hero() {
-  const scrollToServices = () => {
-    const element = document.querySelector('#services');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollToContact = () => {
+    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToContact = () => {
-    const element = document.querySelector('#contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollToGallery = () => {
+    document.querySelector('#gallery')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
@@ -33,32 +26,31 @@ export default function Hero() {
           alt="Classic car restoration workshop"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.08_0.005_250)] via-[oklch(0.08_0.005_250)]/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.08_0.005_250)] via-transparent to-[oklch(0.08_0.005_250)]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.06_0.005_250)] via-[oklch(0.06_0.005_250)]/85 to-[oklch(0.06_0.005_250)]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.06_0.005_250)] via-transparent to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 pt-20 pb-32">
-        <div className="max-w-3xl">
-          {/* Badge */}
+      <div className="container relative z-10 pt-20 md:pt-24 pb-16 md:pb-20">
+        <div className="max-w-2xl lg:max-w-3xl">
+          {/* Badge - Compact */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 px-4 py-2 mb-8"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="inline-flex items-center gap-2 border-l-2 border-primary pl-3 mb-6 md:mb-8"
           >
-            <Award className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary tracking-wide">
+            <span className="text-[10px] md:text-xs tracking-[0.25em] text-primary/90">
               LANGLEY'S PREMIER RESTORATION SHOP
             </span>
           </motion.div>
 
-          {/* Main Heading */}
+          {/* Main Heading - Tighter on mobile */}
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] mb-6"
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.9] mb-4 md:mb-6"
           >
             <span className="text-foreground">BRINGING</span>
             <br />
@@ -67,82 +59,65 @@ export default function Hero() {
             <span className="text-foreground">BACK TO LIFE</span>
           </motion.h1>
 
-          {/* Subtitle */}
+          {/* Subtitle - Compact */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-lg md:text-xl text-foreground/70 max-w-xl mb-10 leading-relaxed"
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="text-sm md:text-base text-foreground/60 max-w-md mb-6 md:mb-8 leading-relaxed"
           >
             Expert automotive restoration and custom bodywork for classic cars, 
-            hot rods, and muscle cars. Meticulous craftsmanship serving the 
-            Greater Vancouver area.
+            hot rods, and muscle cars. Serving Greater Vancouver.
           </motion.p>
 
-          {/* CTAs */}
+          {/* CTAs - Compact */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="flex flex-col sm:flex-row gap-4"
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="flex flex-col sm:flex-row gap-3"
           >
             <button
               onClick={scrollToContact}
-              className="group font-display text-sm tracking-wider bg-primary text-primary-foreground px-8 py-4 hover:bg-primary/90 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 flex items-center justify-center gap-2"
+              className="group font-display text-xs tracking-[0.15em] bg-primary text-primary-foreground px-6 py-3 md:px-8 md:py-3.5 hover:bg-primary/90 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 flex items-center justify-center gap-2"
             >
               <span>START YOUR PROJECT</span>
-              <Wrench className="w-4 h-4 transition-transform group-hover:rotate-12" />
+              <Wrench className="w-3.5 h-3.5 transition-transform group-hover:rotate-12" />
             </button>
             <button
-              onClick={scrollToServices}
-              className="font-display text-sm tracking-wider border border-foreground/30 text-foreground px-8 py-4 hover:border-primary hover:text-primary transition-all duration-300 flex items-center justify-center gap-2"
+              onClick={scrollToGallery}
+              className="font-display text-xs tracking-[0.15em] border border-foreground/20 text-foreground/80 px-6 py-3 md:px-8 md:py-3.5 hover:border-primary hover:text-primary transition-all duration-300"
             >
-              <span>VIEW OUR WORK</span>
+              VIEW OUR WORK
             </button>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-wrap gap-8 md:gap-12 mt-16 pt-8 border-t border-foreground/10"
-          >
-            <div>
-              <div className="font-display text-4xl md:text-5xl text-primary">20+</div>
-              <div className="text-sm text-foreground/60 mt-1">Years Experience</div>
-            </div>
-            <div>
-              <div className="font-display text-4xl md:text-5xl text-primary">500+</div>
-              <div className="text-sm text-foreground/60 mt-1">Projects Completed</div>
-            </div>
-            <div>
-              <div className="font-display text-4xl md:text-5xl text-primary">100%</div>
-              <div className="text-sm text-foreground/60 mt-1">Satisfaction</div>
-            </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Stats Bar - Fixed at bottom, compact */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+        className="absolute bottom-0 left-0 right-0 bg-[oklch(0.06_0.005_250)]/90 backdrop-blur-sm border-t border-primary/10"
       >
-        <span className="text-xs text-foreground/40 tracking-widest">SCROLL</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <ChevronDown className="w-5 h-5 text-foreground/40" />
-        </motion.div>
+        <div className="container">
+          <div className="flex justify-center md:justify-start gap-8 md:gap-16 py-4 md:py-5">
+            <div className="text-center md:text-left">
+              <div className="font-display text-2xl md:text-3xl text-primary">20+</div>
+              <div className="text-[10px] md:text-xs text-foreground/50 tracking-wider">YEARS</div>
+            </div>
+            <div className="text-center md:text-left">
+              <div className="font-display text-2xl md:text-3xl text-primary">500+</div>
+              <div className="text-[10px] md:text-xs text-foreground/50 tracking-wider">PROJECTS</div>
+            </div>
+            <div className="text-center md:text-left">
+              <div className="font-display text-2xl md:text-3xl text-primary">100%</div>
+              <div className="text-[10px] md:text-xs text-foreground/50 tracking-wider">SATISFACTION</div>
+            </div>
+          </div>
+        </div>
       </motion.div>
-
-      {/* Decorative Elements */}
-      <div className="absolute top-1/2 right-0 w-px h-32 bg-gradient-to-b from-transparent via-primary/50 to-transparent hidden lg:block" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
     </section>
   );
 }

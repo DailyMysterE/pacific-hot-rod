@@ -1,149 +1,87 @@
 /*
- * DESIGN: Industrial Heritage Aesthetic
- * - Dark footer with chrome accents
- * - Racing stripe divider
- * - Structured layout with quick links
+ * DESIGN: Ultra-Premium Industrial Heritage
+ * - Compact single-row footer
+ * - Minimal elegant design
+ * - SEO text preserved but subtle
  */
 
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <footer className="bg-[oklch(0.06_0.005_250)] border-t border-border">
-      {/* Main Footer */}
-      <div className="container py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
-          <div className="lg:col-span-1">
+    <footer className="bg-[oklch(0.05_0.005_250)] border-t border-border/30">
+      {/* Main Footer - Compact */}
+      <div className="container py-8 md:py-10">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          {/* Logo & Tagline */}
+          <div className="flex items-center gap-4">
             <img
               src="/images/p-logo.png"
               alt="Pacific Hot Rod"
-              className="h-14 w-auto mb-6"
+              className="h-8 w-auto"
             />
-            <p className="text-foreground/60 text-sm leading-relaxed mb-6">
-              Langley's premier automotive restoration facility, dedicated to bringing 
-              classic cars and hot rods back to their former glory.
-            </p>
-            <div className="flex gap-4">
-              {/* Social placeholders - can be expanded */}
-            </div>
+            <span className="text-[10px] text-foreground/40 tracking-wider hidden sm:inline">
+              LANGLEY'S PREMIER RESTORATION SHOP
+            </span>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-display text-sm tracking-wider text-foreground mb-6">QUICK LINKS</h4>
-            <ul className="space-y-3">
-              {[
-                { label: 'Home', href: '#home' },
-                { label: 'Services', href: '#services' },
-                { label: 'Gallery', href: '#gallery' },
-                { label: 'About Us', href: '#about' },
-                { label: 'Contact', href: '#contact' },
-              ].map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
-                    className="text-foreground/60 hover:text-primary transition-colors text-sm"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Nav Links - Inline */}
+          <nav className="flex flex-wrap gap-4 md:gap-6">
+            {['Home', 'Services', 'Gallery', 'About', 'Contact'].map((link) => (
+              <a
+                key={link}
+                href={`#${link.toLowerCase()}`}
+                onClick={(e) => { e.preventDefault(); scrollToSection(`#${link.toLowerCase()}`); }}
+                className="text-[10px] tracking-wider text-foreground/50 hover:text-primary transition-colors"
+              >
+                {link.toUpperCase()}
+              </a>
+            ))}
+          </nav>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-display text-sm tracking-wider text-foreground mb-6">SERVICES</h4>
-            <ul className="space-y-3">
-              {[
-                'Custom Paint',
-                'Body Restoration',
-                'Hot Rod Builds',
-                'Collision Repair',
-                'Custom Fabrication',
-                'Detailing & Finishing',
-              ].map((service) => (
-                <li key={service}>
-                  <span className="text-foreground/60 text-sm">{service}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="font-display text-sm tracking-wider text-foreground mb-6">CONTACT US</h4>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  href="tel:604-217-2379"
-                  className="flex items-center gap-3 text-foreground/60 hover:text-primary transition-colors"
-                >
-                  <Phone className="w-4 h-4 text-primary" />
-                  <span className="text-sm">604-217-2379</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:info@pacifichotrod.com"
-                  className="flex items-center gap-3 text-foreground/60 hover:text-primary transition-colors"
-                >
-                  <Mail className="w-4 h-4 text-primary" />
-                  <span className="text-sm">info@pacifichotrod.com</span>
-                </a>
-              </li>
-              <li>
-                <div className="flex items-start gap-3 text-foreground/60">
-                  <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Langley, BC<br />Greater Vancouver Area</span>
-                </div>
-              </li>
-            </ul>
+          {/* Contact - Inline */}
+          <div className="flex items-center gap-4">
+            <a
+              href="tel:604-217-2379"
+              className="flex items-center gap-2 text-foreground/50 hover:text-primary transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5" />
+              <span className="text-xs">604-217-2379</span>
+            </a>
+            <a
+              href="mailto:info@pacifichotrod.com"
+              className="flex items-center gap-2 text-foreground/50 hover:text-primary transition-colors"
+            >
+              <Mail className="w-3.5 h-3.5" />
+              <span className="text-xs hidden sm:inline">info@pacifichotrod.com</span>
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Service Areas - SEO Section */}
-      <div className="border-t border-border/50">
-        <div className="container py-8">
-          <h4 className="font-display text-xs tracking-wider text-foreground/40 mb-4">
-            SERVING THE GREATER VANCOUVER AREA
-          </h4>
-          <p className="text-xs text-foreground/30 leading-relaxed">
+      {/* SEO Footer - Very subtle */}
+      <div className="border-t border-border/20">
+        <div className="container py-4">
+          <p className="text-[9px] text-foreground/20 leading-relaxed text-center md:text-left">
             Pacific Hot Rod provides classic car restoration, hot rod builds, and custom automotive 
             bodywork services to Langley, Surrey, Vancouver, Burnaby, Richmond, Coquitlam, 
-            New Westminster, Delta, Abbotsford, White Rock, Maple Ridge, Port Coquitlam, 
-            North Vancouver, West Vancouver, and the entire Lower Mainland of British Columbia.
+            New Westminster, Delta, Abbotsford, White Rock, Maple Ridge, and the Greater Vancouver area.
           </p>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-border/50">
-        <div className="container py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-foreground/40 text-sm">
-              © {currentYear} Pacific Hot Rod. All rights reserved.
-            </p>
-            <div className="flex items-center gap-6 text-sm text-foreground/40">
-              <span>Classic Car Restoration</span>
-              <span className="w-1 h-1 bg-primary rounded-full" />
-              <span>Hot Rod Builds</span>
-              <span className="w-1 h-1 bg-primary rounded-full" />
-              <span>Custom Paint</span>
-            </div>
-          </div>
+      {/* Copyright */}
+      <div className="border-t border-border/20">
+        <div className="container py-4">
+          <p className="text-[10px] text-foreground/30 text-center">
+            © {currentYear} Pacific Hot Rod. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
