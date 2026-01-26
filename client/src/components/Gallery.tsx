@@ -53,18 +53,18 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="pt-12 md:pt-16 pb-20 md:pb-28 relative overflow-hidden">
+    <section id="gallery" className="pt-8 md:pt-16 pb-12 md:pb-28 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[oklch(0.06_0.005_250)]" />
 
       <div className="container relative z-10" ref={ref}>
         {/* Section Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <motion.span
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-block text-primary text-sm md:text-base tracking-[0.3em] mb-4"
+            className="inline-block text-primary text-xs md:text-base tracking-[0.2em] md:tracking-[0.3em] mb-3 md:mb-4"
           >
             OUR WORK
           </motion.span>
@@ -72,7 +72,7 @@ export default function Gallery() {
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-display text-4xl md:text-5xl lg:text-6xl"
+            className="font-display text-3xl md:text-5xl lg:text-6xl"
           >
             PROJECT GALLERY
           </motion.h2>

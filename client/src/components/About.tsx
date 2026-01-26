@@ -17,7 +17,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section id="about" className="py-20 md:py-28 relative overflow-hidden">
+    <section id="about" className="py-12 md:py-28 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[oklch(0.08_0.005_250)]" />
 
@@ -46,7 +46,7 @@ export default function About() {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.5 }}
-              className="inline-block text-primary text-sm md:text-base tracking-[0.3em] mb-4"
+              className="inline-block text-primary text-xs md:text-base tracking-[0.2em] md:tracking-[0.3em] mb-3 md:mb-4"
             >
               ABOUT US
             </motion.span>
@@ -55,7 +55,7 @@ export default function About() {
               initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-display text-4xl md:text-5xl lg:text-6xl mb-6"
+              className="font-display text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-6"
             >
               CRAFTSMANSHIP YOU CAN TRUST
             </motion.h2>
@@ -64,7 +64,7 @@ export default function About() {
               initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-foreground/60 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl"
+              className="text-foreground/60 text-base md:text-xl leading-relaxed mb-6 md:mb-8 max-w-2xl"
             >
               Pacific Hot Rod is Langley's premier automotive restoration facility. 
               Our team combines decades of experience with genuine passion for vintage 

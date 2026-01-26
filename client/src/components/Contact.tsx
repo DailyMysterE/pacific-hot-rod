@@ -36,7 +36,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 relative overflow-hidden">
+    <section id="contact" className="py-12 md:py-28 relative overflow-hidden">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.06_0.005_250)] to-[oklch(0.08_0.005_250)]" />
       
@@ -45,12 +45,12 @@ export default function Contact() {
 
       <div className="container relative z-10" ref={ref}>
         {/* Section Header - Centered */}
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <motion.span
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-block text-primary text-sm md:text-base tracking-[0.3em] mb-4"
+            className="inline-block text-primary text-xs md:text-base tracking-[0.2em] md:tracking-[0.3em] mb-3 md:mb-4"
           >
             GET IN TOUCH
           </motion.span>
@@ -58,7 +58,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-display text-4xl md:text-5xl lg:text-6xl mb-6"
+            className="font-display text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-6"
           >
             START YOUR PROJECT
           </motion.h2>
@@ -66,7 +66,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto"
+            className="text-base md:text-xl text-foreground/60 max-w-2xl mx-auto"
           >
             Ready to bring your classic back to life? Fill out the form below and we'll get back to you within 24 hours.
           </motion.p>
@@ -81,9 +81,9 @@ export default function Contact() {
         >
           <form onSubmit={handleSubmit} className="bg-[oklch(0.10_0.008_250)] border-2 border-primary/20 p-6 md:p-8 shadow-2xl">
             {/* Form header */}
-            <div className="mb-6 text-center">
-              <h3 className="font-display text-xl md:text-2xl text-primary mb-2">Request a Quote</h3>
-              <p className="text-base text-foreground/60">Tell us about your restoration project</p>
+            <div className="mb-5 md:mb-6 text-center">
+              <h3 className="font-display text-lg md:text-2xl text-primary mb-1 md:mb-2">Request a Quote</h3>
+              <p className="text-sm md:text-base text-foreground/60">Tell us about your restoration project</p>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-4">
@@ -171,7 +171,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-8"
         >
           <a
             href="tel:604-217-2379"
