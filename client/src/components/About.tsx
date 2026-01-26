@@ -40,12 +40,6 @@ export default function About() {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 border border-primary/10" />
-              
-              {/* Years badge */}
-              <div className="absolute bottom-0 right-0 bg-primary px-4 py-3">
-                <div className="font-display text-2xl text-primary-foreground leading-none">20+</div>
-                <div className="text-primary-foreground/70 text-[10px] tracking-wider">YEARS</div>
-              </div>
             </div>
           </motion.div>
 
