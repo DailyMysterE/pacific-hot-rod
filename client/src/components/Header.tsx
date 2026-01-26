@@ -151,7 +151,7 @@ export default function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
-                      className="font-display text-3xl md:text-4xl tracking-[0.15em] uppercase text-white hover:text-primary transition-colors duration-200 py-2.5 border-b border-white/5 text-center w-full"
+                      className="font-display text-2xl md:text-3xl font-light tracking-[0.2em] uppercase text-white hover:text-primary transition-colors duration-200 py-3 border-b border-white/5 text-center w-full"
                     >
                       {link.label}
                     </a>
