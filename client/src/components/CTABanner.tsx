@@ -30,7 +30,7 @@ export default function CTABanner() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-center md:text-left"
         >
           <div>

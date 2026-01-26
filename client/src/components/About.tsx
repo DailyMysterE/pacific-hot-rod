@@ -27,7 +27,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="lg:col-span-2 relative"
           >
             <div className="relative aspect-[4/3] overflow-hidden">
@@ -45,7 +45,7 @@ export default function About() {
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="inline-block text-primary text-base font-bold md:text-lg md:font-semibold tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4"
             >
               ABOUT US
@@ -54,7 +54,7 @@ export default function About() {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.3, delay: 0.05, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="font-display text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-6"
             >
               CRAFTSMANSHIP YOU CAN TRUST
@@ -63,7 +63,7 @@ export default function About() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.16, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.3, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="text-foreground/60 text-base md:text-xl leading-relaxed mb-6 md:mb-8 max-w-2xl"
             >
               Pacific Hot Rod is Langley's premier automotive restoration facility. 
@@ -79,7 +79,7 @@ export default function About() {
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.24, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.3, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="inline-flex items-center gap-4 bg-[oklch(0.10_0.008_250)] border border-border/30 px-5 py-4 md:px-6 md:py-5 hover:border-primary/50 hover:bg-[oklch(0.12_0.008_250)] transition-all duration-300 group cursor-pointer"
             >
               <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
