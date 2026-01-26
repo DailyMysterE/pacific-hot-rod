@@ -131,7 +131,7 @@ export default function Header() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.3, delay: 0.1 }}
-              className="container py-8 flex flex-col"
+              className="container py-8 flex flex-col items-center"
             >
               {navLinks.map((link, index) => (
                 <motion.a
@@ -141,7 +141,7 @@ export default function Header() {
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.3, delay: 0.1 + index * 0.05 }}
-                  className="font-display text-2xl tracking-[0.15em] uppercase text-foreground/80 hover:text-primary transition-colors py-4 border-b border-border/30"
+                  className="font-display text-2xl tracking-[0.15em] uppercase text-foreground/80 hover:text-primary transition-colors py-4 border-b border-border/30 text-center w-full"
                 >
                   {link.label}
                 </motion.a>
