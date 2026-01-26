@@ -29,7 +29,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent md:mt-8" />
         <Services />
         <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
         <Gallery />
