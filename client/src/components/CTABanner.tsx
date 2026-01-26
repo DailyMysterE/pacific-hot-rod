@@ -31,7 +31,7 @@ export default function CTABanner() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+          className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-center md:text-left"
         >
           <div>
             <span className="inline-block text-primary text-sm md:text-base tracking-[0.3em] mb-4">
@@ -48,7 +48,7 @@ export default function CTABanner() {
               e.preventDefault();
               document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="group font-display text-sm md:text-base tracking-[0.15em] bg-primary text-primary-foreground px-6 py-3.5 hover:bg-primary/90 transition-all duration-300 flex items-center gap-2 self-start md:self-center"
+            className="group font-display text-sm md:text-base tracking-[0.15em] bg-primary text-primary-foreground px-6 py-3.5 hover:bg-primary/90 transition-all duration-300 flex items-center gap-2 self-center md:self-center"
           >
             <span>GET A FREE QUOTE</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
