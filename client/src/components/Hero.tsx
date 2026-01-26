@@ -37,7 +37,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.2, delay: 0 }}
-            className="inline-flex items-center gap-2 border-l-2 border-primary pl-3 mb-5 md:mb-8"
+            className="inline-flex items-center gap-2 border-l-2 border-primary pl-3 mb-5 md:mb-6"
           >
             <span className="text-[1rem] font-bold md:text-base md:font-semibold tracking-[0.03em] md:tracking-[0.15em] text-primary/90 whitespace-nowrap">
               LANGLEY'S PREMIER RESTORATION SHOP
@@ -49,7 +49,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25, delay: 0.03 }}
-            className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] mb-4 md:mb-6"
+            className="font-display text-5xl md:text-7xl lg:text-7xl leading-[0.95] mb-4 md:mb-6"
           >
             <span className="text-foreground">BRINGING</span>
             <br />
