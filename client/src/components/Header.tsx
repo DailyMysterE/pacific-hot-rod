@@ -124,7 +124,7 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden fixed inset-0 top-16 bg-[oklch(0.06_0.005_250)] backdrop-blur-xl"
+            className="lg:hidden fixed inset-0 top-16 bg-black/95 backdrop-blur-2xl"
           >
             <motion.div 
               initial={{ y: -20, opacity: 0 }}
