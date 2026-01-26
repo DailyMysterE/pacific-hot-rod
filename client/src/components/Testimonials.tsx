@@ -72,14 +72,14 @@ export default function Testimonials() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="bg-[oklch(0.08_0.005_250)] border border-border/30 overflow-hidden hover:border-primary/50 transition-all duration-300 group"
+              className="bg-[oklch(0.08_0.005_250)] border border-border/30 overflow-hidden hover:border-primary/50 group"
             >
               {/* Vehicle Image */}
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={testimonial.image}
                   alt={testimonial.vehicle}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.08_0.005_250)] via-transparent to-transparent opacity-60" />
               </div>

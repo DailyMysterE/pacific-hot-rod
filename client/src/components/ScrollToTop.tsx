@@ -47,12 +47,12 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className={`fixed bottom-[20vh] right-6 md:bottom-[20vh] md:right-8 z-50 bg-white text-black p-3 md:p-4 rounded-full shadow-2xl hover:shadow-primary/50 hover:scale-110 transition-all duration-300 group ${
+          className={`fixed bottom-[18vh] right-4 md:bottom-[18vh] md:right-6 z-50 bg-white text-black p-4 md:p-5 rounded-full shadow-2xl hover:shadow-primary/50 hover:scale-110 transition-all duration-300 group ${
             isScrolling ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
           aria-label="Scroll to top"
         >
-          <ChevronUp className="w-5 h-5 md:w-6 md:h-6 group-hover:-translate-y-0.5 transition-transform duration-300" />
+          <ChevronUp className="w-6 h-6 md:w-7 md:h-7 group-hover:-translate-y-0.5 transition-transform duration-300" />
         </button>
       )}
     </>
