@@ -1,7 +1,7 @@
 /*
  * DESIGN: Ultra-Premium Industrial Heritage
- * - Compact gallery grid
- * - Minimal filter tabs
+ * - Simple gallery grid without filters
+ * - Larger text sizes
  * - Elegant lightbox
  */
 
@@ -11,31 +11,24 @@ import { useRef, useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const galleryImages = [
-  { src: '/images/gallery_036_update.jpg', alt: 'Classic Mustang restoration', category: 'Paint' },
-  { src: '/images/gallery_035_update.jpg', alt: 'Classic Mustang side view', category: 'Paint' },
-  { src: '/images/gallery_037_update.jpg', alt: 'Classic muscle car matte blue', category: 'Paint' },
-  { src: '/images/gallery_034_update.jpg', alt: 'Chevrolet 454 SS truck', category: 'Restoration' },
-  { src: '/images/gallery_033_update.jpg', alt: 'Chevrolet 454 SS front', category: 'Restoration' },
-  { src: '/images/gallery_031.jpg', alt: 'Classic Chevrolet pickup', category: 'Restoration' },
-  { src: '/images/gallery_026.jpg', alt: 'Vintage pickup body work', category: 'Bodywork' },
-  { src: '/images/gallery_025.jpg', alt: 'Classic truck primer stage', category: 'Bodywork' },
-  { src: '/images/gallery_013.jpg', alt: 'Classic Ford Galaxie', category: 'Bodywork' },
-  { src: '/images/gallery_003.jpg', alt: 'Chevrolet 454 SS paint booth', category: 'Paint' },
-  { src: '/images/gallery_001.jpg', alt: 'Classic truck black finish', category: 'Paint' },
-  { src: '/images/gallery_010.jpg', alt: 'Classic car restoration', category: 'Bodywork' },
+  { src: '/images/gallery_036_update.jpg', alt: 'Classic Mustang restoration' },
+  { src: '/images/gallery_035_update.jpg', alt: 'Classic Mustang side view' },
+  { src: '/images/gallery_037_update.jpg', alt: 'Classic muscle car matte blue' },
+  { src: '/images/gallery_034_update.jpg', alt: 'Chevrolet 454 SS truck' },
+  { src: '/images/gallery_033_update.jpg', alt: 'Chevrolet 454 SS front' },
+  { src: '/images/gallery_031.jpg', alt: 'Classic Chevrolet pickup' },
+  { src: '/images/gallery_026.jpg', alt: 'Vintage pickup body work' },
+  { src: '/images/gallery_025.jpg', alt: 'Classic truck primer stage' },
+  { src: '/images/gallery_013.jpg', alt: 'Classic Ford Galaxie' },
+  { src: '/images/gallery_003.jpg', alt: 'Chevrolet 454 SS paint booth' },
+  { src: '/images/gallery_001.jpg', alt: 'Classic truck black finish' },
+  { src: '/images/gallery_010.jpg', alt: 'Classic car restoration' },
 ];
 
 export default function Gallery() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const [filter, setFilter] = useState<string>('All');
-
-  const categories = ['All', 'Paint', 'Restoration', 'Bodywork'];
-  
-  const filteredImages = filter === 'All' 
-    ? galleryImages 
-    : galleryImages.filter(img => img.category === filter);
 
   const openLightbox = (index: number) => {
     setSelectedImage(index);
@@ -49,97 +42,71 @@ export default function Gallery() {
 
   const nextImage = () => {
     if (selectedImage !== null) {
-      setSelectedImage((selectedImage + 1) % filteredImages.length);
+      setSelectedImage((selectedImage + 1) % galleryImages.length);
     }
   };
 
   const prevImage = () => {
     if (selectedImage !== null) {
-      setSelectedImage((selectedImage - 1 + filteredImages.length) % filteredImages.length);
+      setSelectedImage((selectedImage - 1 + galleryImages.length) % galleryImages.length);
     }
   };
 
   return (
-    <section id="gallery" className="py-14 md:py-20 relative overflow-hidden">
+    <section id="gallery" className="py-16 md:py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[oklch(0.06_0.005_250)]" />
 
       <div className="container relative z-10" ref={ref}>
-        {/* Section Header - Compact */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8 md:mb-10">
-          <div>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.5 }}
-              className="inline-block text-primary text-[10px] tracking-[0.3em] mb-2"
-            >
-              OUR WORK
-            </motion.span>
-            <motion.h2
-              initial={{ opacity: 0, y: 15 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-display text-2xl md:text-3xl lg:text-4xl"
-            >
-              PROJECT GALLERY
-            </motion.h2>
-          </div>
-
-          {/* Filter Tabs - Minimal */}
-          <motion.div
+        {/* Section Header */}
+        <div className="text-center mb-12 md:mb-16">
+          <motion.span
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex gap-1"
+            transition={{ duration: 0.5 }}
+            className="inline-block text-primary text-xs md:text-sm tracking-[0.3em] mb-4"
           >
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setFilter(category)}
-                className={`font-display text-[10px] md:text-xs tracking-wider px-3 py-1.5 transition-all duration-300 ${
-                  filter === category
-                    ? 'bg-primary text-primary-foreground'
-                    : 'text-foreground/50 hover:text-foreground'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </motion.div>
+            OUR WORK
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="font-display text-4xl md:text-5xl lg:text-6xl"
+          >
+            PROJECT GALLERY
+          </motion.h2>
         </div>
 
-        {/* Gallery Grid - Compact 3x4 on mobile */}
-        <motion.div
-          layout
-          className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1.5 md:gap-2"
-        >
-          <AnimatePresence mode="popLayout">
-            {filteredImages.map((image, index) => (
-              <motion.div
-                key={image.src}
-                layout
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="group relative cursor-pointer overflow-hidden aspect-square"
-                onClick={() => openLightbox(index)}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/30 transition-all duration-300" />
-                
-                {/* Border on hover */}
-                <div className="absolute inset-0 border border-transparent group-hover:border-primary/60 transition-all duration-300" />
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        {/* Gallery Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          {galleryImages.map((image, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.4, delay: 0.05 * index }}
+              className="group relative aspect-square overflow-hidden bg-[oklch(0.10_0.008_250)] cursor-pointer"
+              onClick={() => openLightbox(index)}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.06_0.005_250)] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              {/* Hover overlay with plus icon */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="w-12 h-12 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/50 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
 
       {/* Lightbox */}
@@ -149,46 +116,59 @@ export default function Gallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-[oklch(0.06_0.005_250)]/98 backdrop-blur-sm flex items-center justify-center p-4"
             onClick={closeLightbox}
           >
             {/* Close button */}
             <button
               onClick={closeLightbox}
-              className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center text-foreground/60 hover:text-foreground transition-colors"
+              className="absolute top-4 right-4 md:top-8 md:right-8 w-12 h-12 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/50 flex items-center justify-center hover:bg-primary/30 transition-colors z-10"
             >
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6 text-primary" />
             </button>
 
-            {/* Navigation */}
+            {/* Navigation buttons */}
             <button
-              onClick={(e) => { e.stopPropagation(); prevImage(); }}
-              className="absolute left-2 md:left-6 w-10 h-10 flex items-center justify-center text-foreground/60 hover:text-primary transition-all"
+              onClick={(e) => {
+                e.stopPropagation();
+                prevImage();
+              }}
+              className="absolute left-4 md:left-8 w-12 h-12 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/50 flex items-center justify-center hover:bg-primary/30 transition-colors z-10"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-6 h-6 text-primary" />
             </button>
+
             <button
-              onClick={(e) => { e.stopPropagation(); nextImage(); }}
-              className="absolute right-2 md:right-6 w-10 h-10 flex items-center justify-center text-foreground/60 hover:text-primary transition-all"
+              onClick={(e) => {
+                e.stopPropagation();
+                nextImage();
+              }}
+              className="absolute right-4 md:right-8 w-12 h-12 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/50 flex items-center justify-center hover:bg-primary/30 transition-colors z-10"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-6 h-6 text-primary" />
             </button>
 
             {/* Image */}
-            <motion.img
-              key={selectedImage}
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              src={filteredImages[selectedImage].src}
-              alt={filteredImages[selectedImage].alt}
-              className="max-w-full max-h-[85vh] object-contain"
+              transition={{ duration: 0.3 }}
+              className="max-w-6xl max-h-[90vh] relative"
               onClick={(e) => e.stopPropagation()}
-            />
+            >
+              <img
+                src={galleryImages[selectedImage].src}
+                alt={galleryImages[selectedImage].alt}
+                className="w-full h-full object-contain"
+              />
+            </motion.div>
 
-            {/* Counter */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 font-display text-xs tracking-wider text-foreground/50">
-              {selectedImage + 1} / {filteredImages.length}
+            {/* Image counter */}
+            <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/50">
+              <span className="font-display text-sm text-primary">
+                {selectedImage + 1} / {galleryImages.length}
+              </span>
             </div>
           </motion.div>
         )}

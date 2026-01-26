@@ -50,7 +50,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.9] mb-4 md:mb-6"
+            className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-4 md:mb-6"
           >
             <span className="text-foreground">BRINGING</span>
             <br />
@@ -64,7 +64,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.3 }}
-            className="text-sm md:text-base text-foreground/60 max-w-md mb-6 md:mb-8 leading-relaxed"
+            className="text-lg md:text-xl text-foreground/60 max-w-md mb-6 md:mb-8 leading-relaxed"
           >
             Expert automotive restoration and custom bodywork for classic cars, 
             hot rods, and muscle cars. Serving Greater Vancouver.
