@@ -124,14 +124,14 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden fixed inset-0 top-16 bg-black/95 backdrop-blur-2xl"
+            className="lg:hidden fixed inset-0 top-0 bg-black/95 backdrop-blur-2xl z-40"
           >
             <motion.div 
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.3, delay: 0.1 }}
-              className="container py-8 flex flex-col items-center"
+              className="container pt-24 pb-8 flex flex-col items-center"
             >
               {navLinks.map((link, index) => (
                 <motion.a
