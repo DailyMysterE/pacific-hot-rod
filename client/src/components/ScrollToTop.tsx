@@ -3,8 +3,11 @@ import { ChevronUp } from 'lucide-react';
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
+    let scrollTimeout: NodeJS.Timeout;
+
     const toggleVisibility = () => {
       // Show button after scrolling 20% of page height
       const scrolled = window.scrollY;
@@ -13,13 +16,23 @@ export default function ScrollToTop() {
       
       if (scrollPercentage > 20) {
         setIsVisible(true);
+        setIsScrolling(true);
+
+        // Hide button after user stops scrolling for 2 seconds
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          setIsScrolling(false);
+        }, 2000);
       } else {
         setIsVisible(false);
       }
     };
 
     window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+      clearTimeout(scrollTimeout);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -34,7 +47,9 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-[20vh] right-6 md:bottom-[20vh] md:right-8 z-50 bg-white text-black p-3 md:p-4 rounded-full shadow-2xl hover:shadow-primary/50 hover:scale-110 transition-all duration-300 group"
+          className={`fixed bottom-[20vh] right-6 md:bottom-[20vh] md:right-8 z-50 bg-white text-black p-3 md:p-4 rounded-full shadow-2xl hover:shadow-primary/50 hover:scale-110 transition-all duration-300 group ${
+            isScrolling ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`}
           aria-label="Scroll to top"
         >
           <ChevronUp className="w-5 h-5 md:w-6 md:h-6 group-hover:-translate-y-0.5 transition-transform duration-300" />
