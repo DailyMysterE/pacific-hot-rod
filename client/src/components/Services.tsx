@@ -113,10 +113,10 @@ export default function Services() {
 
                   {/* Text content */}
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-display text-base md:text-xl lg:text-2xl text-foreground/90 group-hover:text-foreground transition-colors mb-1 md:mb-2">
+                    <h3 className="font-display text-lg md:text-2xl lg:text-3xl text-foreground/90 group-hover:text-foreground transition-colors mb-1.5 md:mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-xs md:text-sm lg:text-base text-foreground/50 group-hover:text-foreground/60 transition-colors leading-relaxed">
+                    <p className="text-sm md:text-base lg:text-lg text-foreground/50 group-hover:text-foreground/60 transition-colors leading-relaxed">
                       {service.description}
                     </p>
                   </div>
