@@ -180,7 +180,7 @@ export default function Header() {
                   initial={{ y: 30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.4, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  className="w-full"
+                  className="w-full mb-16"
                 >
                   {/* Divider */}
                   <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8" />
