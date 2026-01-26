@@ -40,7 +40,7 @@ export default function Header() {
 
   return (
     <header 
-      className={`fixed md:top-4 top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed md:top-4 top-2 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
           ? 'bg-[oklch(0.06_0.005_250)]/90 backdrop-blur-xl border-b border-primary/10 shadow-2xl shadow-black/40' 
           : 'bg-gradient-to-b from-black/60 to-transparent'
@@ -86,7 +86,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden relative z-10 w-10 h-10 flex items-center justify-center text-foreground border border-border/50 hover:border-primary/50 transition-colors"
+            className="lg:hidden relative z-10 w-12 h-12 flex items-center justify-center text-foreground border border-border/50 hover:border-primary/50 transition-colors"
             aria-label="Toggle menu"
           >
             <AnimatePresence mode="wait">

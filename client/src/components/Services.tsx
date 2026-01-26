@@ -84,9 +84,9 @@ export default function Services() {
             return (
               <motion.div
                 key={service.number}
-                initial={{ opacity: 0, x: -30 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.3, delay: 0.05 * index }}
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.4, ease: 'easeOut' }}
                 className="group relative bg-gradient-to-r from-[oklch(0.10_0.008_250)] to-[oklch(0.08_0.005_250)] border border-border/30 hover:border-primary/50 transition-all duration-300 overflow-hidden"
               >
                 {/* Hover gradient overlay */}
