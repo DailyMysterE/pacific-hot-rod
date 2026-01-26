@@ -77,7 +77,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="max-w-3xl mx-auto mb-12 md:mb-16"
+          className="max-w-3xl mx-auto mb-8 md:mb-10"
         >
           <form onSubmit={handleSubmit} className="bg-[oklch(0.10_0.008_250)] border-2 border-primary/20 p-6 md:p-8 shadow-2xl">
             {/* Form header */}
@@ -171,7 +171,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-12"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8"
         >
           <a
             href="tel:604-217-2379"
