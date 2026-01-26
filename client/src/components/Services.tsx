@@ -98,26 +98,15 @@ export default function Services() {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 {/* Content */}
-                <div className="relative flex items-center gap-4 md:gap-6 p-4 md:p-6">
-                  {/* Number badge */}
-                  <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
-                    <span className="font-display text-lg md:text-2xl text-primary">{service.number}</span>
-                  </div>
-
+                <div className="relative flex items-center justify-center gap-4 md:gap-6 p-4 md:p-6">
                   {/* Text content */}
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-0 text-center">
                     <h3 className="font-display text-lg md:text-2xl lg:text-3xl text-foreground/90 group-hover:text-foreground transition-colors mb-1.5 md:mb-2">
                       {service.title}
                     </h3>
                     <p className="text-lg md:text-xl lg:text-2xl font-medium text-foreground/60 group-hover:text-foreground/70 transition-colors leading-relaxed">
                       {service.description}
                     </p>
-                  </div>
-
-                  {/* Arrow indicator - hidden on mobile */}
-                  <div className="hidden md:flex flex-shrink-0 w-8 h-8 items-center justify-center">
-                    <div className="w-0 group-hover:w-6 h-px bg-primary/50 transition-all duration-300" />
-                    <div className="w-0 h-0 border-l-4 border-l-primary/0 group-hover:border-l-primary/50 border-y-4 border-y-transparent transition-all duration-300 -ml-1" />
                   </div>
                 </div>
 
