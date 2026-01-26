@@ -39,7 +39,7 @@ export default function Hero() {
             transition={{ duration: 0.4, delay: 0.1 }}
             className="inline-flex items-center gap-2 border-l-2 border-primary pl-3 mb-6 md:mb-8"
           >
-            <span className="text-[10px] md:text-xs tracking-[0.25em] text-primary/90">
+            <span className="text-sm md:text-base tracking-[0.25em] text-primary/90">
               LANGLEY'S PREMIER RESTORATION SHOP
             </span>
           </motion.div>
@@ -94,7 +94,7 @@ export default function Hero() {
               <div className="h-12 w-px bg-primary/20" />
               <div className="text-left">
                 <div className="font-display text-2xl md:text-3xl text-primary leading-none">40+</div>
-                <div className="text-[10px] text-foreground/50 tracking-wider mt-0.5">YEARS</div>
+                <div className="text-sm md:text-base text-foreground/50 tracking-wider mt-0.5">YEARS</div>
               </div>
             </div>
           </motion.div>
