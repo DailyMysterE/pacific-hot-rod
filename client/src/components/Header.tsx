@@ -86,7 +86,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden relative z-10 w-12 h-12 flex items-center justify-center text-foreground border border-border/50 hover:border-primary/50 transition-colors"
+            className="lg:hidden relative z-10 w-14 h-14 flex items-center justify-center text-foreground border border-border/50 hover:border-primary/50 transition-colors"
             aria-label="Toggle menu"
           >
             <AnimatePresence mode="wait">
@@ -98,7 +98,7 @@ export default function Header() {
                   exit={{ rotate: 90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-6 h-6" />
                 </motion.div>
               ) : (
                 <motion.div
@@ -108,7 +108,7 @@ export default function Header() {
                   exit={{ rotate: -90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Menu className="w-5 h-5" />
+                  <Menu className="w-6 h-6" />
                 </motion.div>
               )}
             </AnimatePresence>
