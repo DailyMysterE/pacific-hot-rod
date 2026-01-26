@@ -3,7 +3,7 @@
  * - Sleek glass-morphism navbar with subtle border glow
  * - No top bar - cleaner, more premium look
  * - Refined typography and spacing
- * - Premium full-screen black mobile menu with optimized animations
+ * - Premium full-screen black mobile menu centered vertically
  */
 
 import { useState, useEffect } from 'react';
@@ -135,76 +135,78 @@ export default function Header() {
               </button>
             </div>
 
-            {/* Menu Content - Fixed structure with space-between */}
-            <div className="min-h-screen flex flex-col justify-between px-6 pt-32 pb-24">
-              {/* Navigation Links - Top Section */}
-              <div className="flex flex-col items-center w-full max-w-md mx-auto">
-                {navLinks.map((link, index) => (
+            {/* Menu Content - Centered vertically */}
+            <div className="min-h-screen flex items-center justify-center px-6 py-20">
+              <div className="w-full max-w-md">
+                {/* Navigation Links */}
+                <div className="flex flex-col items-center w-full mb-8">
+                  {navLinks.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
+                      className="font-display text-3xl md:text-4xl tracking-[0.15em] uppercase text-white hover:text-primary transition-colors duration-200 py-2.5 border-b border-white/5 text-center w-full"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
                   <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
-                    className="font-display text-3xl md:text-4xl tracking-[0.15em] uppercase text-white hover:text-primary transition-colors duration-200 py-4 border-b border-white/5 text-center w-full"
+                    href="#contact"
+                    onClick={(e) => { e.preventDefault(); scrollToSection('#contact'); }}
+                    className="font-display text-center text-sm tracking-[0.2em] uppercase bg-primary text-primary-foreground px-12 py-4 mt-6 hover:bg-primary/90 transition-colors duration-200"
                   >
-                    {link.label}
-                  </a>
-                ))}
-                <a
-                  href="#contact"
-                  onClick={(e) => { e.preventDefault(); scrollToSection('#contact'); }}
-                  className="font-display text-center text-sm tracking-[0.2em] uppercase bg-primary text-primary-foreground px-12 py-5 mt-8 hover:bg-primary/90 transition-colors duration-200"
-                >
-                  Get a Quote
-                </a>
-              </div>
-
-              {/* Contact Details - Bottom Section */}
-              <div className="w-full max-w-md mx-auto">
-                {/* Divider */}
-                <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8" />
-                
-                {/* Contact Icons */}
-                <div className="flex items-center justify-center gap-5 mb-6">
-                  {/* Call */}
-                  <a
-                    href="tel:604-217-2379"
-                    className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-200 group"
-                    aria-label="Call us"
-                  >
-                    <Phone className="w-5 h-5" />
-                  </a>
-
-                  {/* Text/SMS */}
-                  <a
-                    href="sms:604-217-2379"
-                    className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-200 group"
-                    aria-label="Text us"
-                  >
-                    <MessageSquare className="w-5 h-5" />
-                  </a>
-
-                  {/* Email */}
-                  <a
-                    href="mailto:info@pacifichotrod.com"
-                    className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-200 group"
-                    aria-label="Email us"
-                  >
-                    <Mail className="w-5 h-5" />
+                    Get a Quote
                   </a>
                 </div>
 
-                {/* Address */}
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=5650+Production+Way+Langley+BC+Canada"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2.5 text-white/60 hover:text-primary transition-colors duration-200 group px-4"
-                >
-                  <MapPin className="w-4 h-4 flex-shrink-0" />
-                  <span className="font-display text-sm tracking-[0.1em] uppercase text-center">
-                    5650 Production Way, Langley, BC
-                  </span>
-                </a>
+                {/* Contact Details */}
+                <div className="w-full">
+                  {/* Divider */}
+                  <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-6" />
+                  
+                  {/* Contact Icons */}
+                  <div className="flex items-center justify-center gap-5 mb-5">
+                    {/* Call */}
+                    <a
+                      href="tel:604-217-2379"
+                      className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-200"
+                      aria-label="Call us"
+                    >
+                      <Phone className="w-5 h-5" />
+                    </a>
+
+                    {/* Text/SMS */}
+                    <a
+                      href="sms:604-217-2379"
+                      className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-200"
+                      aria-label="Text us"
+                    >
+                      <MessageSquare className="w-5 h-5" />
+                    </a>
+
+                    {/* Email */}
+                    <a
+                      href="mailto:info@pacifichotrod.com"
+                      className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-200"
+                      aria-label="Email us"
+                    >
+                      <Mail className="w-5 h-5" />
+                    </a>
+                  </div>
+
+                  {/* Address */}
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=5650+Production+Way+Langley+BC+Canada"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2.5 text-white/60 hover:text-primary transition-colors duration-200 px-4"
+                  >
+                    <MapPin className="w-4 h-4 flex-shrink-0" />
+                    <span className="font-display text-sm tracking-[0.1em] uppercase text-center">
+                      5650 Production Way, Langley, BC
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
