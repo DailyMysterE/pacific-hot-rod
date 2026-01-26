@@ -14,7 +14,7 @@ const address = '5650 Production Way, Langley, BC, Canada';
 
 export default function About() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const isInView = useInView(ref, { once: true, margin: '0px', amount: 0.1 });
 
   return (
     <section id="about" className="py-10 md:py-28 relative overflow-hidden">
@@ -25,9 +25,9 @@ export default function About() {
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
           {/* Image Side - 2 cols */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="lg:col-span-2 relative"
           >
             <div className="relative aspect-[4/3] overflow-hidden">
@@ -43,27 +43,27 @@ export default function About() {
           {/* Content Side - 3 cols */}
           <div className="lg:col-span-3">
             <motion.span
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="inline-block text-primary text-base font-bold md:text-lg md:font-semibold tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4"
             >
               ABOUT US
             </motion.span>
             
             <motion.h2
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.5, delay: 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="font-display text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-6"
             >
               CRAFTSMANSHIP YOU CAN TRUST
             </motion.h2>
 
             <motion.p
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.16, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="text-foreground/60 text-base md:text-xl leading-relaxed mb-6 md:mb-8 max-w-2xl"
             >
               Pacific Hot Rod is Langley's premier automotive restoration facility. 
@@ -77,9 +77,9 @@ export default function About() {
               href="https://www.google.com/maps/search/?api=1&query=5650+Production+Way+Langley+BC+Canada"
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.24, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="inline-flex items-center gap-4 bg-[oklch(0.10_0.008_250)] border border-border/30 px-5 py-4 md:px-6 md:py-5 hover:border-primary/50 hover:bg-[oklch(0.12_0.008_250)] transition-all duration-300 group cursor-pointer"
             >
               <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">

@@ -13,7 +13,7 @@ import { toast } from 'sonner';
 
 export default function Contact() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const isInView = useInView(ref, { once: true, margin: '0px', amount: 0.1 });
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -47,25 +47,25 @@ export default function Contact() {
         {/* Section Header - Centered */}
         <div className="text-center mb-8 md:mb-16">
           <motion.span
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="inline-block text-primary text-base font-bold md:text-lg md:font-semibold tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4"
           >
             GET IN TOUCH
           </motion.span>
           <motion.h2
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="font-display text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-6"
           >
             START YOUR PROJECT
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.16, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="text-base md:text-xl text-foreground/60 max-w-2xl mx-auto"
           >
             Ready to bring your classic back to life? Fill out the form below and we'll get back to you within 24 hours.

@@ -36,7 +36,7 @@ const testimonials = [
 
 export default function Testimonials() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const isInView = useInView(ref, { once: true, margin: '0px', amount: 0.1 });
 
   return (
     <section id="testimonials" className="py-10 md:py-28 relative overflow-hidden">
@@ -47,17 +47,17 @@ export default function Testimonials() {
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-16">
           <motion.span
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.4 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="inline-block text-primary text-base font-bold md:text-lg md:font-semibold tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4"
           >
             CLIENT REVIEWS
           </motion.span>
           <motion.h2
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.4, delay: 0.05 }}
+            transition={{ duration: 0.5, delay: 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="font-display text-3xl md:text-5xl lg:text-6xl"
           >
             WHAT OUR CLIENTS SAY
@@ -71,7 +71,7 @@ export default function Testimonials() {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: 0.1 + index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="bg-[oklch(0.08_0.005_250)] border border-border/30 overflow-hidden hover:border-primary/50 transition-all duration-300 group"
             >
               {/* Vehicle Image */}

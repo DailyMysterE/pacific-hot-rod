@@ -11,7 +11,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CTABanner() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const isInView = useInView(ref, { once: true, margin: '0px', amount: 0.1 });
 
   return (
     <section className="relative py-10 md:py-20 overflow-hidden" ref={ref}>
@@ -30,7 +30,7 @@ export default function CTABanner() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-center md:text-left"
         >
           <div>

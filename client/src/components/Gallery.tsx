@@ -27,7 +27,7 @@ const galleryImages = [
 
 export default function Gallery() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const isInView = useInView(ref, { once: true, margin: '0px', amount: 0.1 });
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const openLightbox = (index: number) => {
@@ -61,17 +61,17 @@ export default function Gallery() {
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-16">
           <motion.span
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.4 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="inline-block text-primary text-base font-bold md:text-lg md:font-semibold tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4"
           >
             OUR WORK
           </motion.span>
           <motion.h2
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.4, delay: 0.05 }}
+            transition={{ duration: 0.5, delay: 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="font-display text-3xl md:text-5xl lg:text-6xl"
           >
             PROJECT GALLERY
@@ -85,7 +85,7 @@ export default function Gallery() {
               key={index}
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.3, delay: 0.03 * index }}
+              transition={{ duration: 0.5, delay: index * 0.04, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="group relative aspect-square overflow-hidden bg-[oklch(0.10_0.008_250)] cursor-pointer"
               onClick={() => openLightbox(index)}
             >
