@@ -36,7 +36,7 @@ const testimonials = [
 
 export default function Testimonials() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-300px 0px -300px 0px', amount: 0 });
+  const isInView = useInView(ref, { once: true, margin: '-500px 0px -500px 0px', amount: 0 });
 
   return (
     <section id="testimonials" className="py-10 md:py-28 relative overflow-hidden">
