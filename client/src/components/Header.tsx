@@ -139,7 +139,7 @@ export default function Header() {
             </div>
 
             {/* Menu Content - Optimized spacing */}
-            <div className="min-h-screen flex flex-col items-center justify-center px-6 py-24 pb-32">
+            <div className="min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-20">
               <div className="w-full max-w-md flex flex-col items-center justify-center">
                 {/* Navigation Links */}
                 <motion.div 
