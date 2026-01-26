@@ -39,7 +39,7 @@ export default function Hero() {
             transition={{ duration: 0.4, delay: 0.1 }}
             className="inline-flex items-center gap-2 border-l-2 border-primary pl-3 mb-5 md:mb-8"
           >
-            <span className="text-xs md:text-base tracking-[0.2em] md:tracking-[0.25em] text-primary/90">
+            <span className="text-sm md:text-base tracking-[0.15em] md:tracking-[0.25em] text-primary/90">
               LANGLEY'S PREMIER RESTORATION SHOP
             </span>
           </motion.div>
