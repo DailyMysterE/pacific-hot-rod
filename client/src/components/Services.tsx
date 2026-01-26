@@ -59,7 +59,7 @@ export default function Services() {
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: 0.05 * index }}
+              transition={{ duration: 0.3, delay: Math.min(0.05 * index, 0.3) }}
               className="group relative aspect-square bg-[oklch(0.10_0.008_250)] border border-border/50 hover:border-primary/60 transition-all duration-500 flex flex-col items-center justify-center p-4 overflow-hidden"
             >
               {/* Subtle gradient overlay on hover */}

@@ -37,7 +37,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             className="inline-flex items-center gap-2 border-l-2 border-primary pl-3 mb-6 md:mb-8"
           >
             <span className="text-[10px] md:text-xs tracking-[0.25em] text-primary/90">
@@ -49,7 +49,7 @@ export default function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
             className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.9] mb-4 md:mb-6"
           >
             <span className="text-foreground">BRINGING</span>
@@ -63,7 +63,7 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.3, delay: 0.3 }}
             className="text-sm md:text-base text-foreground/60 max-w-md mb-6 md:mb-8 leading-relaxed"
           >
             Expert automotive restoration and custom bodywork for classic cars, 
@@ -74,7 +74,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-3"
           >
             <button
