@@ -53,7 +53,7 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="py-16 md:py-24 relative overflow-hidden">
+    <section id="gallery" className="py-20 md:py-28 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[oklch(0.06_0.005_250)]" />
 
