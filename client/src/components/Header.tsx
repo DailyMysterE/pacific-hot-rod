@@ -136,7 +136,7 @@ export default function Header() {
             </div>
 
             {/* Menu Content - Fixed structure with space-between */}
-            <div className="min-h-screen flex flex-col justify-between px-6 pt-28 pb-12">
+            <div className="min-h-screen flex flex-col justify-between px-6 pt-32 pb-24">
               {/* Navigation Links - Top Section */}
               <div className="flex flex-col items-center w-full max-w-md mx-auto">
                 {navLinks.map((link, index) => (
