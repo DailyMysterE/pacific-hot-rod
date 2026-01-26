@@ -36,10 +36,10 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
+            transition={{ duration: 0.3, delay: 0 }}
             className="inline-flex items-center gap-2 border-l-2 border-primary pl-3 mb-5 md:mb-8"
           >
-            <span className="text-[0.95rem] font-bold md:text-lg md:font-semibold tracking-[0.04em] md:tracking-[0.25em] text-primary/90 whitespace-nowrap">
+            <span className="text-[1rem] font-bold md:text-lg md:font-semibold tracking-[0.03em] md:tracking-[0.25em] text-primary/90 whitespace-nowrap">
               LANGLEY'S PREMIER RESTORATION SHOP
             </span>
           </motion.div>
@@ -48,8 +48,8 @@ export default function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            className="font-display text-4xl md:text-7xl lg:text-8xl leading-[0.95] mb-4 md:mb-6"
+            transition={{ duration: 0.3, delay: 0.05 }}
+            className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] mb-4 md:mb-6"
           >
             <span className="text-foreground">BRINGING</span>
             <br />
@@ -62,7 +62,7 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.3 }}
+            transition={{ duration: 0.25, delay: 0.1 }}
             className="text-base md:text-xl text-foreground/60 max-w-md mb-5 md:mb-8 leading-relaxed"
           >
             Expert automotive restoration and custom bodywork for classic cars, 
@@ -73,7 +73,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.4 }}
+            transition={{ duration: 0.25, delay: 0.15 }}
             className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-6"
           >
             <button
@@ -103,7 +103,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.5 }}
+            transition={{ duration: 0.25, delay: 0.2 }}
             className="sm:hidden flex items-center justify-center gap-3 mt-5"
           >
             <div className="h-px w-8 bg-primary/20" />

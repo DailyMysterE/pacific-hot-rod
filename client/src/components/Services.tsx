@@ -61,7 +61,7 @@ export default function Services() {
           <motion.span
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.4 }}
             className="inline-block text-primary text-base font-bold md:text-lg md:font-semibold tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4"
           >
             WHAT WE DO
@@ -69,7 +69,7 @@ export default function Services() {
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.4, delay: 0.05 }}
             className="font-display text-3xl md:text-5xl lg:text-6xl mb-3 md:mb-4"
           >
             OUR SERVICES
@@ -86,7 +86,7 @@ export default function Services() {
                 key={service.number}
                 initial={{ opacity: 0, x: -30 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.4, delay: 0.1 * index }}
+                transition={{ duration: 0.3, delay: 0.05 * index }}
                 className="group relative bg-gradient-to-r from-[oklch(0.10_0.008_250)] to-[oklch(0.08_0.005_250)] border border-border/30 hover:border-primary/50 transition-all duration-300 overflow-hidden"
               >
                 {/* Hover gradient overlay */}
