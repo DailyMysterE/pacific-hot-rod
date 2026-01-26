@@ -3,7 +3,7 @@
  * - Sleek glass-morphism navbar with subtle border glow
  * - No top bar - cleaner, more premium look
  * - Refined typography and spacing
- * - Premium full-screen black mobile menu optimized for all screen sizes
+ * - Premium full-screen black mobile menu with optimized animations
  */
 
 import { useState, useEffect } from 'react';
@@ -118,7 +118,7 @@ export default function Header() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.2 }}
             className="lg:hidden fixed inset-0 bg-black z-[100] overflow-y-auto"
           >
             {/* Subtle gradient overlay for depth */}
@@ -126,108 +126,85 @@ export default function Header() {
 
             {/* Close Button - Top Right Corner */}
             <div className="fixed top-4 right-4 z-[110]">
-              <motion.button
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                transition={{ duration: 0.3, delay: 0.2 }}
+              <button
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="w-14 h-14 flex items-center justify-center text-white border border-white/20 hover:border-primary hover:text-primary transition-all duration-300 backdrop-blur-sm bg-white/5"
                 aria-label="Close menu"
               >
                 <X className="w-6 h-6" />
-              </motion.button>
+              </button>
             </div>
 
-            {/* Menu Content - Optimized spacing */}
-            <div className="min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-20">
-              <div className="w-full max-w-md flex flex-col items-center justify-center">
-                {/* Navigation Links */}
-                <motion.div 
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: 20, opacity: 0 }}
-                  transition={{ duration: 0.3, delay: 0.1 }}
-                  className="flex flex-col items-center w-full mb-10"
-                >
-                  {navLinks.map((link, index) => (
-                    <motion.a
-                      key={link.href}
-                      href={link.href}
-                      onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
-                      initial={{ x: -30, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.4, delay: 0.15 + index * 0.06, ease: [0.22, 1, 0.36, 1] }}
-                      className="font-display text-3xl md:text-4xl tracking-[0.15em] uppercase text-white hover:text-primary transition-all duration-300 py-4 border-b border-white/5 text-center w-full relative group"
-                    >
-                      {link.label}
-                      <span className="absolute left-0 bottom-0 w-0 h-px bg-gradient-to-r from-primary via-primary/50 to-transparent transition-all duration-500 group-hover:w-full" />
-                    </motion.a>
-                  ))}
-                  <motion.a
-                    href="#contact"
-                    onClick={(e) => { e.preventDefault(); scrollToSection('#contact'); }}
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.4, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                    className="font-display text-center text-sm tracking-[0.2em] uppercase bg-primary text-primary-foreground px-12 py-5 mt-8 hover:bg-primary/90 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300"
-                  >
-                    Get a Quote
-                  </motion.a>
-                </motion.div>
-
-                {/* Contact Details - Bottom */}
-                <motion.div
-                  initial={{ y: 30, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.4, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  className="w-full mb-16"
-                >
-                  {/* Divider */}
-                  <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8" />
-                  
-                  {/* Contact Icons */}
-                  <div className="flex items-center justify-center gap-5 mb-6">
-                    {/* Call */}
-                    <a
-                      href="tel:604-217-2379"
-                      className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-300 group"
-                      aria-label="Call us"
-                    >
-                      <Phone className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                    </a>
-
-                    {/* Text/SMS */}
-                    <a
-                      href="sms:604-217-2379"
-                      className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-300 group"
-                      aria-label="Text us"
-                    >
-                      <MessageSquare className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                    </a>
-
-                    {/* Email */}
-                    <a
-                      href="mailto:info@pacifichotrod.com"
-                      className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-300 group"
-                      aria-label="Email us"
-                    >
-                      <Mail className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                    </a>
-                  </div>
-
-                  {/* Address */}
+            {/* Menu Content - Fixed structure with space-between */}
+            <div className="min-h-screen flex flex-col justify-between px-6 pt-28 pb-12">
+              {/* Navigation Links - Top Section */}
+              <div className="flex flex-col items-center w-full max-w-md mx-auto">
+                {navLinks.map((link, index) => (
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=5650+Production+Way+Langley+BC+Canada"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2.5 text-white/60 hover:text-primary transition-colors duration-300 group px-4"
+                    key={link.href}
+                    href={link.href}
+                    onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
+                    className="font-display text-3xl md:text-4xl tracking-[0.15em] uppercase text-white hover:text-primary transition-colors duration-200 py-4 border-b border-white/5 text-center w-full"
                   >
-                    <MapPin className="w-4 h-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                    <span className="font-display text-sm tracking-[0.1em] uppercase text-center">
-                      5650 Production Way, Langley, BC
-                    </span>
+                    {link.label}
                   </a>
-                </motion.div>
+                ))}
+                <a
+                  href="#contact"
+                  onClick={(e) => { e.preventDefault(); scrollToSection('#contact'); }}
+                  className="font-display text-center text-sm tracking-[0.2em] uppercase bg-primary text-primary-foreground px-12 py-5 mt-8 hover:bg-primary/90 transition-colors duration-200"
+                >
+                  Get a Quote
+                </a>
+              </div>
+
+              {/* Contact Details - Bottom Section */}
+              <div className="w-full max-w-md mx-auto">
+                {/* Divider */}
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8" />
+                
+                {/* Contact Icons */}
+                <div className="flex items-center justify-center gap-5 mb-6">
+                  {/* Call */}
+                  <a
+                    href="tel:604-217-2379"
+                    className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-200 group"
+                    aria-label="Call us"
+                  >
+                    <Phone className="w-5 h-5" />
+                  </a>
+
+                  {/* Text/SMS */}
+                  <a
+                    href="sms:604-217-2379"
+                    className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-200 group"
+                    aria-label="Text us"
+                  >
+                    <MessageSquare className="w-5 h-5" />
+                  </a>
+
+                  {/* Email */}
+                  <a
+                    href="mailto:info@pacifichotrod.com"
+                    className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-200 group"
+                    aria-label="Email us"
+                  >
+                    <Mail className="w-5 h-5" />
+                  </a>
+                </div>
+
+                {/* Address */}
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=5650+Production+Way+Langley+BC+Canada"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2.5 text-white/60 hover:text-primary transition-colors duration-200 group px-4"
+                >
+                  <MapPin className="w-4 h-4 flex-shrink-0" />
+                  <span className="font-display text-sm tracking-[0.1em] uppercase text-center">
+                    5650 Production Way, Langley, BC
+                  </span>
+                </a>
               </div>
             </div>
           </motion.div>
