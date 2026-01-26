@@ -115,7 +115,7 @@ export default function Testimonials() {
                   <h4 className="font-display text-base md:text-lg text-foreground font-semibold mb-1">
                     {testimonial.name}
                   </h4>
-                  <p className="text-sm md:text-base text-primary font-semibold tracking-wide">
+                  <p className="text-base md:text-lg text-primary font-bold tracking-wide">
                     {testimonial.vehicle}
                   </p>
                 </div>
