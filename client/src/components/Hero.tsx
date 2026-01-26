@@ -94,7 +94,7 @@ export default function Hero() {
               <div className="h-12 w-px bg-primary/20" />
               <div className="text-left">
                 <div className="font-display text-2xl md:text-3xl text-primary leading-none">40+</div>
-                <div className="text-sm md:text-base text-foreground/50 tracking-wider mt-0.5">YEARS</div>
+                <div className="text-sm md:text-base text-foreground/50 tracking-wider mt-0.5">YEARS<br/>EXPERIENCE</div>
               </div>
             </div>
           </motion.div>
@@ -109,7 +109,7 @@ export default function Hero() {
             <div className="h-px w-8 bg-primary/20" />
             <div className="text-center">
               <div className="font-display text-2xl text-primary leading-none">40+</div>
-              <div className="text-xs text-foreground/50 tracking-wider mt-0.5">YEARS</div>
+              <div className="text-xs text-foreground/50 tracking-wider mt-0.5">YEARS<br/>EXPERIENCE</div>
             </div>
             <div className="h-px w-8 bg-primary/20" />
           </motion.div>
