@@ -94,7 +94,18 @@ export default function Hero() {
         </div>
       </div>
 
-
+      {/* Single Stat - 40+ Years */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 md:left-8 md:translate-x-0 md:bottom-12"
+      >
+        <div className="text-center md:text-left bg-[oklch(0.06_0.005_250)]/80 backdrop-blur-sm border border-primary/20 px-6 py-3">
+          <div className="font-display text-3xl md:text-4xl text-primary">40+</div>
+          <div className="text-xs text-foreground/60 tracking-wider">YEARS EXPERIENCE</div>
+        </div>
+      </motion.div>
     </section>
   );
 }
