@@ -6,7 +6,7 @@
 
 export default function Footer() {
   return (
-    <footer className="relative py-12 md:py-16 overflow-hidden">
+    <footer className="relative py-8 md:py-16 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[oklch(0.06_0.005_250)]" />
       

@@ -14,7 +14,7 @@ export default function CTABanner() {
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section className="relative py-14 md:py-20 overflow-hidden" ref={ref}>
+    <section className="relative py-10 md:py-20 overflow-hidden" ref={ref}>
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
