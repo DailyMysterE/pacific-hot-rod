@@ -63,7 +63,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25, delay: 0.1 }}
-            className="text-base md:text-xl text-foreground/60 max-w-md mb-5 md:mb-8 leading-relaxed"
+            className="text-lg md:text-xl text-foreground/80 max-w-md mb-5 md:mb-8 leading-relaxed font-medium"
           >
             Expert automotive restoration and custom bodywork for classic cars, 
             hot rods, and muscle cars. Serving Greater Vancouver.
