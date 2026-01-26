@@ -78,13 +78,13 @@ export default function Hero() {
           >
             <button
               onClick={scrollToContact}
-              className="group font-display font-bold md:font-semibold text-xs md:text-base tracking-[0.15em] bg-primary text-primary-foreground px-8 py-3.5 md:px-12 md:py-5 hover:bg-primary/90 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-0.5"
+              className="group font-display font-extrabold text-xs md:text-base tracking-[0.15em] bg-primary text-primary-foreground px-8 py-3.5 md:px-12 md:py-5 hover:bg-primary/90 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-0.5"
             >
               START YOUR PROJECT
             </button>
             <button
               onClick={scrollToGallery}
-              className="font-display font-bold md:font-semibold text-xs md:text-base tracking-[0.15em] border-2 border-foreground/20 text-foreground/80 px-8 py-3.5 md:px-12 md:py-5 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300"
+              className="font-display font-extrabold text-xs md:text-base tracking-[0.15em] border-2 border-foreground/20 text-foreground/80 px-8 py-3.5 md:px-12 md:py-5 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300"
             >
               VIEW OUR WORK
             </button>
