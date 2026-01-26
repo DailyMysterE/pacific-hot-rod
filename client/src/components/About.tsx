@@ -55,7 +55,7 @@ export default function About() {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.5 }}
-              className="inline-block text-primary text-[10px] tracking-[0.3em] mb-2"
+              className="inline-block text-primary text-xs md:text-sm tracking-[0.3em] mb-4"
             >
               ABOUT US
             </motion.span>
@@ -64,7 +64,7 @@ export default function About() {
               initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-display text-2xl md:text-3xl lg:text-4xl mb-4"
+              className="font-display text-4xl md:text-5xl lg:text-6xl mb-6"
             >
               CRAFTSMANSHIP YOU CAN TRUST
             </motion.h2>
@@ -73,7 +73,7 @@ export default function About() {
               initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-foreground/60 text-sm leading-relaxed mb-6 max-w-xl"
+              className="text-foreground/60 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl"
             >
               Pacific Hot Rod is Langley's premier automotive restoration facility. 
               Our team combines decades of experience with genuine passion for vintage 
@@ -88,10 +88,10 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex items-start gap-3"
             >
-              <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+              <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
               <div className="flex flex-wrap gap-1.5">
                 {serviceAreas.map((area, index) => (
-                  <span key={area} className="text-[10px] text-foreground/50 tracking-wider">
+                  <span key={area} className="text-sm md:text-base text-foreground/50 tracking-wider">
                     {area}{index < serviceAreas.length - 1 && <span className="text-primary/40 ml-1.5">•</span>}
                   </span>
                 ))}
