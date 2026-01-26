@@ -104,7 +104,7 @@ export default function Contact() {
                   <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
                     <MapPin className="w-5 h-5 text-primary" />
                   </div>
-                  <span className="text-base md:text-lg">Langley, BC<br/>Greater Vancouver</span>
+                  <span className="text-base md:text-lg">Langley, BC</span>
                 </div>
               </div>
             </motion.div>
