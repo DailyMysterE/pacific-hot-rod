@@ -72,17 +72,22 @@ export default function About() {
               we deliver exceptional results.
             </motion.p>
 
-            {/* Address */}
+            {/* Address - Premium styling */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex items-start gap-3"
+              className="inline-flex items-center gap-4 bg-[oklch(0.10_0.008_250)] border border-border/30 px-5 py-4 md:px-6 md:py-5"
             >
-              <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-              <span className="text-base md:text-lg text-foreground/60">
-                {address}
-              </span>
+              <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
+                <MapPin className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+              </div>
+              <div>
+                <div className="text-xs tracking-wider text-foreground/40 mb-1 font-display">LOCATION</div>
+                <div className="text-base md:text-lg text-foreground/80 font-medium">
+                  {address}
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
