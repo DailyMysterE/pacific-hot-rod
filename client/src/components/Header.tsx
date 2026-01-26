@@ -61,7 +61,7 @@ export default function Header() {
         }`}
       >
         <div className="container">
-          <nav className="flex items-center justify-between h-16 md:h-20">
+          <nav className="flex items-center justify-between h-20 lg:h-20">
             {/* Logo */}
             <a 
               href="#home" 
