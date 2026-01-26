@@ -34,7 +34,7 @@ export default function CTABanner() {
           className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-center md:text-left"
         >
           <div>
-            <span className="inline-block text-primary text-sm font-semibold md:font-normal md:text-base tracking-[0.15em] md:tracking-[0.3em] mb-4">
+            <span className="inline-block text-primary text-sm font-semibold md:text-lg md:font-semibold tracking-[0.15em] md:tracking-[0.3em] mb-4">
               READY TO START?
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl">

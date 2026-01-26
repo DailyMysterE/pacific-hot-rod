@@ -46,7 +46,7 @@ export default function About() {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.5 }}
-              className="inline-block text-primary text-sm font-semibold md:font-normal md:text-base tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4"
+              className="inline-block text-primary text-sm font-semibold md:text-lg md:font-semibold tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4"
             >
               ABOUT US
             </motion.span>
