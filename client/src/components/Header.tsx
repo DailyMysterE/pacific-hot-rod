@@ -68,7 +68,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
-                className="font-display text-sm md:text-base tracking-[0.2em] uppercase text-foreground/70 hover:text-foreground px-4 py-2 transition-all duration-300 relative group"
+                className="font-display font-medium text-sm tracking-[0.15em] uppercase text-foreground/80 hover:text-primary px-5 py-2 transition-all duration-300 relative group"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent transition-all duration-300 group-hover:w-full" />
@@ -77,7 +77,7 @@ export default function Header() {
             <a
               href="#contact"
               onClick={(e) => { e.preventDefault(); scrollToSection('#contact'); }}
-              className="font-display text-sm md:text-base tracking-[0.15em] uppercase ml-4 bg-primary text-primary-foreground px-6 py-3 transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 border border-primary/50"
+              className="font-display font-semibold text-sm tracking-[0.15em] uppercase ml-6 bg-primary text-primary-foreground px-8 py-3 transition-all duration-300 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5"
             >
               Get a Quote
             </a>
