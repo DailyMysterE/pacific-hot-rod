@@ -52,6 +52,13 @@ export default function Header() {
 
   return (
     <>
+      {/* Background Extension for Mobile/Tablet - fills gap above header */}
+      <div className={`fixed top-0 left-0 right-0 h-4 md:hidden z-50 transition-all duration-500 ${
+        isScrolled 
+          ? 'bg-[oklch(0.06_0.005_250)]/90 backdrop-blur-xl' 
+          : 'bg-gradient-to-b from-black/60 to-transparent'
+      }`} />
+      
       {/* Desktop/Tablet Header */}
       <header 
         className={`fixed top-4 md:top-0 left-0 right-0 z-50 transition-all duration-500 ${
