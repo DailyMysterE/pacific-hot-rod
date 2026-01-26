@@ -1,7 +1,7 @@
 /*
  * DESIGN: Ultra-Premium Industrial Heritage
- * - Minimal premium service cards without icons
- * - Elegant typography and subtle animations
+ * - Minimal premium service cards - typography only
+ * - Elegant design with subtle animations
  * - 5 services (removed Detailing)
  */
 
@@ -10,11 +10,11 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const services = [
-  { title: 'Custom Paint', number: '01' },
-  { title: 'Body Restoration', number: '02' },
-  { title: 'Hot Rod Builds', number: '03' },
-  { title: 'Collision Repair', number: '04' },
-  { title: 'Fabrication', number: '05' },
+  'Custom Paint',
+  'Body Restoration',
+  'Hot Rod Builds',
+  'Collision Repair',
+  'Fabrication',
 ];
 
 export default function Services() {
@@ -50,42 +50,36 @@ export default function Services() {
           </motion.h2>
         </div>
 
-        {/* Services Grid - Premium minimal cards */}
+        {/* Services Grid - Ultra-premium minimal cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
           {services.map((service, index) => (
             <motion.div
-              key={service.title}
+              key={service}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.3, delay: Math.min(0.05 * index, 0.3) }}
-              className="group relative aspect-square bg-gradient-to-br from-[oklch(0.10_0.008_250)] to-[oklch(0.08_0.005_250)] border border-border/30 hover:border-primary/60 transition-all duration-500 flex flex-col items-center justify-center p-8 overflow-hidden"
+              className="group relative aspect-square bg-gradient-to-br from-[oklch(0.12_0.008_250)] to-[oklch(0.08_0.005_250)] border border-border/20 hover:border-primary/50 transition-all duration-500 flex items-center justify-center p-8 overflow-hidden"
             >
-              {/* Subtle gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              {/* Subtle grain texture overlay */}
+              <div className="absolute inset-0 opacity-[0.015] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')]" />
               
-              {/* Top left corner accent */}
-              <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-primary/0 group-hover:border-primary/40 transition-all duration-500" />
+              {/* Hover gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/8 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              {/* Bottom right corner accent */}
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-primary/0 group-hover:border-primary/40 transition-all duration-500" />
+              {/* Corner accent lines */}
+              <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-primary/0 group-hover:border-primary/40 transition-all duration-500" />
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-primary/0 group-hover:border-primary/40 transition-all duration-500" />
               
-              {/* Number */}
-              <div className="relative z-10 font-display text-5xl md:text-6xl text-primary/20 group-hover:text-primary/30 transition-colors duration-300 mb-4">
-                {service.number}
-              </div>
-
               {/* Title */}
-              <h3 className="relative z-10 font-display text-lg md:text-xl tracking-wider text-center text-foreground/70 group-hover:text-foreground transition-colors duration-300 leading-tight">
-                {service.title.toUpperCase()}
+              <h3 className="relative z-10 font-display text-xl md:text-2xl tracking-wide text-center text-foreground/60 group-hover:text-foreground transition-all duration-300 leading-tight">
+                {service.toUpperCase()}
               </h3>
 
-              {/* Hover accent line */}
-              <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-0 group-hover:w-16 h-px bg-primary/60 transition-all duration-500" />
+              {/* Bottom accent line on hover */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-0 group-hover:w-12 h-px bg-primary/50 transition-all duration-500" />
             </motion.div>
           ))}
         </div>
-
-
       </div>
     </section>
   );
