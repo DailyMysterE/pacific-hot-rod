@@ -74,14 +74,7 @@ export default function Services() {
           >
             OUR SERVICES
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-sm md:text-lg text-foreground/60 max-w-2xl mx-auto"
-          >
-            Premium automotive restoration and custom fabrication services
-          </motion.p>
+
         </div>
 
         {/* Services List - Premium horizontal cards */}
