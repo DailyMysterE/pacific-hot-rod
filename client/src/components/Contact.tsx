@@ -166,43 +166,67 @@ export default function Contact() {
           </form>
         </motion.div>
 
-        {/* Contact Info - Centered Below Form */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-8"
-        >
-          <a
+        {/* Contact Info - Premium Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
+          <motion.a
             href="tel:604-217-2379"
-            className="flex items-center gap-4 text-foreground/70 hover:text-primary transition-colors group"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="group relative bg-[oklch(0.10_0.008_250)] border border-border/30 hover:border-primary/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
           >
-            <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <Phone className="w-5 h-5 text-primary" />
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
+                <Phone className="w-6 h-6 text-primary" />
+              </div>
+              <div className="flex-1">
+                <div className="text-xs tracking-wider text-foreground/40 mb-1 font-display">PHONE</div>
+                <div className="text-base md:text-lg text-foreground/80 group-hover:text-primary transition-colors font-medium">604-217-2379</div>
+              </div>
             </div>
-            <span className="text-base md:text-lg">604-217-2379</span>
-          </a>
-          <a
+            <div className="absolute bottom-0 left-0 w-0 group-hover:w-full h-0.5 bg-primary/50 transition-all duration-500" />
+          </motion.a>
+
+          <motion.a
             href="mailto:info@pacifichotrod.com"
-            className="flex items-center gap-4 text-foreground/70 hover:text-primary transition-colors group"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="group relative bg-[oklch(0.10_0.008_250)] border border-border/30 hover:border-primary/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
           >
-            <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <Mail className="w-5 h-5 text-primary" />
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
+                <Mail className="w-6 h-6 text-primary" />
+              </div>
+              <div className="flex-1">
+                <div className="text-xs tracking-wider text-foreground/40 mb-1 font-display">EMAIL</div>
+                <div className="text-base md:text-lg text-foreground/80 group-hover:text-primary transition-colors font-medium">info@pacifichotrod.com</div>
+              </div>
             </div>
-            <span className="text-base md:text-lg">info@pacifichotrod.com</span>
-          </a>
-          <a
+            <div className="absolute bottom-0 left-0 w-0 group-hover:w-full h-0.5 bg-primary/50 transition-all duration-500" />
+          </motion.a>
+
+          <motion.a
             href="https://www.google.com/maps/search/?api=1&query=5650+Production+Way+Langley+BC+Canada"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 text-foreground/70 hover:text-primary transition-colors group"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="group relative bg-[oklch(0.10_0.008_250)] border border-border/30 hover:border-primary/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
           >
-            <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <MapPin className="w-5 h-5 text-primary" />
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
+                <MapPin className="w-6 h-6 text-primary" />
+              </div>
+              <div className="flex-1">
+                <div className="text-xs tracking-wider text-foreground/40 mb-1 font-display">LOCATION</div>
+                <div className="text-base md:text-lg text-foreground/80 group-hover:text-primary transition-colors font-medium">5650 Production Way, Langley, BC</div>
+              </div>
             </div>
-            <span className="text-base md:text-lg">5650 Production Way, Langley, BC, Canada</span>
-          </a>
-        </motion.div>
+            <div className="absolute bottom-0 left-0 w-0 group-hover:w-full h-0.5 bg-primary/50 transition-all duration-500" />
+          </motion.a>
+        </div>
       </div>
     </section>
   );
