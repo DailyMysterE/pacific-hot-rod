@@ -21,8 +21,8 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
-          src="/images/shop-exterior.png"
-          alt="Pacific Hot Rod restoration facility"
+          src="/images/hero-main.jpg"
+          alt="Classic car restoration workshop"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.06_0.005_250)] via-[oklch(0.06_0.005_250)]/85 to-[oklch(0.06_0.005_250)]/40" />
