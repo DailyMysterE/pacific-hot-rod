@@ -10,10 +10,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { MapPin } from 'lucide-react';
 
-const serviceAreas = [
-  'Langley', 'Surrey', 'Vancouver', 'Burnaby', 'Richmond',
-  'Coquitlam', 'Delta', 'Abbotsford', 'White Rock', 'Maple Ridge',
-];
+const address = '5650 Production Way, Langley, BC, Canada';
 
 export default function About() {
   const ref = useRef(null);
@@ -75,7 +72,7 @@ export default function About() {
               we deliver exceptional results.
             </motion.p>
 
-            {/* Service Areas - Compact */}
+            {/* Address */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -83,13 +80,9 @@ export default function About() {
               className="flex items-start gap-3"
             >
               <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-              <div className="flex flex-wrap gap-1.5">
-                {serviceAreas.map((area, index) => (
-                  <span key={area} className="text-sm md:text-base text-foreground/50 tracking-wider">
-                    {area}{index < serviceAreas.length - 1 && <span className="text-primary/40 ml-1.5">•</span>}
-                  </span>
-                ))}
-              </div>
+              <span className="text-sm md:text-base text-foreground/50 tracking-wider">
+                {address}
+              </span>
             </motion.div>
           </div>
         </div>
