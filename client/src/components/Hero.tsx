@@ -39,7 +39,7 @@ export default function Hero() {
             transition={{ duration: 0.4, delay: 0.1 }}
             className="inline-flex items-center gap-2 border-l-2 border-primary pl-3 mb-5 md:mb-8"
           >
-            <span className="text-xs font-bold md:text-lg md:font-semibold tracking-[0.1em] md:tracking-[0.25em] text-primary/90 whitespace-nowrap">
+            <span className="text-sm font-bold md:text-lg md:font-semibold tracking-[0.08em] md:tracking-[0.25em] text-primary/90 whitespace-nowrap">
               LANGLEY'S PREMIER RESTORATION SHOP
             </span>
           </motion.div>
