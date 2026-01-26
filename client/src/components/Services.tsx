@@ -106,11 +106,6 @@ export default function Services() {
                     <span className="font-display text-lg md:text-2xl text-primary">{service.number}</span>
                   </div>
 
-                  {/* Icon - hidden on mobile */}
-                  <div className="hidden sm:flex flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[oklch(0.12_0.008_250)] border border-border/20 items-center justify-center group-hover:border-primary/30 transition-all duration-300">
-                    <Icon className="w-5 h-5 md:w-6 md:h-6 text-primary/70 group-hover:text-primary transition-colors" />
-                  </div>
-
                   {/* Text content */}
                   <div className="flex-1 min-w-0">
                     <h3 className="font-display text-lg md:text-2xl lg:text-3xl text-foreground/90 group-hover:text-foreground transition-colors mb-1.5 md:mb-2">
