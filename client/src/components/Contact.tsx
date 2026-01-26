@@ -36,7 +36,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-10 md:py-28 relative overflow-hidden">
+    <section id="contact" className="py-10 md:pt-28 md:pb-12 relative overflow-hidden">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.06_0.005_250)] to-[oklch(0.08_0.005_250)]" />
       
