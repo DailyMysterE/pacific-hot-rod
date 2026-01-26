@@ -111,7 +111,7 @@ export default function Services() {
                     <h3 className="font-display text-lg md:text-2xl lg:text-3xl text-foreground/90 group-hover:text-foreground transition-colors mb-1.5 md:mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-sm md:text-base lg:text-lg text-foreground/50 group-hover:text-foreground/60 transition-colors leading-relaxed">
+                    <p className="text-base md:text-lg lg:text-xl font-medium text-foreground/60 group-hover:text-foreground/70 transition-colors leading-relaxed">
                       {service.description}
                     </p>
                   </div>
