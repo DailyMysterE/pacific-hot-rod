@@ -131,15 +131,15 @@ export default function Header() {
                 animate={{ rotate: 0, opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="w-12 h-12 flex items-center justify-center text-white border border-white/20 hover:border-primary hover:text-primary transition-all duration-300 backdrop-blur-sm bg-white/5"
+                className="w-14 h-14 flex items-center justify-center text-white border border-white/20 hover:border-primary hover:text-primary transition-all duration-300 backdrop-blur-sm bg-white/5"
                 aria-label="Close menu"
               >
-                <X className="w-5 h-5" />
+                <X className="w-6 h-6" />
               </motion.button>
             </div>
 
             {/* Menu Content - Optimized spacing */}
-            <div className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
+            <div className="min-h-screen flex flex-col items-center justify-center px-6 py-24">
               <div className="w-full max-w-md flex flex-col items-center justify-center">
                 {/* Navigation Links */}
                 <motion.div 
@@ -147,7 +147,7 @@ export default function Header() {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: 20, opacity: 0 }}
                   transition={{ duration: 0.3, delay: 0.1 }}
-                  className="flex flex-col items-center w-full mb-8"
+                  className="flex flex-col items-center w-full mb-10"
                 >
                   {navLinks.map((link, index) => (
                     <motion.a
@@ -157,7 +157,7 @@ export default function Header() {
                       initial={{ x: -30, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.4, delay: 0.15 + index * 0.06, ease: [0.22, 1, 0.36, 1] }}
-                      className="font-display text-2xl md:text-3xl tracking-[0.15em] uppercase text-white hover:text-primary transition-all duration-300 py-3.5 border-b border-white/5 text-center w-full relative group"
+                      className="font-display text-3xl md:text-4xl tracking-[0.15em] uppercase text-white hover:text-primary transition-all duration-300 py-4 border-b border-white/5 text-center w-full relative group"
                     >
                       {link.label}
                       <span className="absolute left-0 bottom-0 w-0 h-px bg-gradient-to-r from-primary via-primary/50 to-transparent transition-all duration-500 group-hover:w-full" />
@@ -169,7 +169,7 @@ export default function Header() {
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.4, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                    className="font-display text-center text-xs tracking-[0.2em] uppercase bg-primary text-primary-foreground px-10 py-4 mt-6 hover:bg-primary/90 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300"
+                    className="font-display text-center text-sm tracking-[0.2em] uppercase bg-primary text-primary-foreground px-12 py-5 mt-8 hover:bg-primary/90 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300"
                   >
                     Get a Quote
                   </motion.a>
@@ -183,35 +183,35 @@ export default function Header() {
                   className="w-full"
                 >
                   {/* Divider */}
-                  <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-6" />
+                  <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8" />
                   
                   {/* Contact Icons */}
-                  <div className="flex items-center justify-center gap-4 mb-5">
+                  <div className="flex items-center justify-center gap-5 mb-6">
                     {/* Call */}
                     <a
                       href="tel:604-217-2379"
-                      className="w-12 h-12 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-300 group"
+                      className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-300 group"
                       aria-label="Call us"
                     >
-                      <Phone className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                      <Phone className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                     </a>
 
                     {/* Text/SMS */}
                     <a
                       href="sms:604-217-2379"
-                      className="w-12 h-12 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-300 group"
+                      className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-300 group"
                       aria-label="Text us"
                     >
-                      <MessageSquare className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                      <MessageSquare className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                     </a>
 
                     {/* Email */}
                     <a
                       href="mailto:info@pacifichotrod.com"
-                      className="w-12 h-12 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-300 group"
+                      className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-300 group"
                       aria-label="Email us"
                     >
-                      <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                      <Mail className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                     </a>
                   </div>
 
@@ -220,10 +220,10 @@ export default function Header() {
                     href="https://www.google.com/maps/search/?api=1&query=5650+Production+Way+Langley+BC+Canada"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 text-white/60 hover:text-primary transition-colors duration-300 group px-4"
+                    className="flex items-center justify-center gap-2.5 text-white/60 hover:text-primary transition-colors duration-300 group px-4"
                   >
-                    <MapPin className="w-3.5 h-3.5 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                    <span className="font-display text-xs tracking-[0.1em] uppercase text-center">
+                    <MapPin className="w-4 h-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                    <span className="font-display text-sm tracking-[0.1em] uppercase text-center">
                       5650 Production Way, Langley, BC
                     </span>
                   </a>
