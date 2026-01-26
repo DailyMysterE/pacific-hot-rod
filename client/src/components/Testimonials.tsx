@@ -47,17 +47,17 @@ export default function Testimonials() {
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-16">
           <motion.span
-            initial={{ opacity: 1, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 20 }}
-            transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+            initial={{ opacity: 1, y: 10 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
+            transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
             className="inline-block text-primary text-base font-bold md:text-lg md:font-semibold tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4"
           >
             CLIENT REVIEWS
           </motion.span>
           <motion.h2
-            initial={{ opacity: 1, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 20 }}
-            transition={{ duration: 0.3, delay: 0.05, ease: [0.25, 0.46, 0.45, 0.94] }}
+            initial={{ opacity: 1, y: 10 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
+            transition={{ duration: 0.2, delay: 0.03, ease: [0.4, 0, 0.2, 1] }}
             className="font-display text-3xl md:text-5xl lg:text-6xl"
           >
             WHAT OUR CLIENTS SAY
@@ -69,9 +69,9 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 1, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 30 }}
-              transition={{ duration: 0.35, delay: index * 0.05, ease: [0.25, 0.46, 0.45, 0.94] }}
+              initial={{ opacity: 1, y: 15 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 15 }}
+              transition={{ duration: 0.25, delay: index * 0.03, ease: [0.4, 0, 0.2, 1] }}
               className="bg-[oklch(0.08_0.005_250)] border border-border/30 overflow-hidden hover:border-primary/50 group"
             >
               {/* Vehicle Image */}
