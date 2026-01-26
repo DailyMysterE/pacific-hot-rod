@@ -45,7 +45,7 @@ const services = [
 
 export default function Services() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px', amount: 0.2 });
+  const isInView = useInView(ref, { once: true, margin: '0px', amount: 0.1 });
 
   return (
     <section id="services" className="py-10 md:py-28 relative overflow-hidden">
@@ -61,7 +61,7 @@ export default function Services() {
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="inline-block text-primary text-base font-bold md:text-lg md:font-semibold tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4"
           >
             WHAT WE DO
@@ -69,7 +69,7 @@ export default function Services() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, delay: 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="font-display text-3xl md:text-5xl lg:text-6xl mb-3 md:mb-4"
           >
             OUR SERVICES
@@ -87,11 +87,11 @@ export default function Services() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ 
-                  duration: 0.6, 
-                  delay: 0.2 + (index * 0.08),
-                  ease: [0.22, 1, 0.36, 1]
+                  duration: 0.5, 
+                  delay: index * 0.06,
+                  ease: [0.25, 0.46, 0.45, 0.94]
                 }}
-                className="group relative bg-gradient-to-r from-[oklch(0.10_0.008_250)] to-[oklch(0.08_0.005_250)] border border-border/30 hover:border-primary/50 transition-all duration-300 overflow-hidden"
+                className="group relative bg-gradient-to-r from-[oklch(0.10_0.008_250)] to-[oklch(0.08_0.005_250)] border border-border/30 hover:border-primary/50 overflow-hidden"
                 style={{ willChange: isInView ? 'auto' : 'opacity, transform' }}
               >
                 {/* Hover gradient overlay */}
