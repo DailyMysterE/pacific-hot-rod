@@ -101,10 +101,10 @@ export default function Header() {
             {!isMobileMenuOpen && (
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
-                className="lg:hidden relative z-10 w-14 h-14 flex items-center justify-center text-foreground border border-border/50 hover:border-primary/50 transition-colors"
+                className="lg:hidden relative z-10 w-16 h-16 flex items-center justify-center text-foreground border border-border/50 hover:border-primary/50 transition-colors"
                 aria-label="Open menu"
               >
-                <Menu className="w-6 h-6" />
+                <Menu className="w-7 h-7" />
               </button>
             )}
           </nav>
