@@ -12,21 +12,21 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Michael Thompson',
+    name: 'Michael',
     vehicle: '1967 Chevrolet Camaro SS',
     review: 'Pacific Hot Rod transformed my Camaro beyond my expectations. The attention to detail in the bodywork and paint is exceptional. They treated my car like it was their own. Worth every penny.',
     image: '/images/gallery_036_update.jpg',
     rating: 5
   },
   {
-    name: 'David Chen',
+    name: 'David',
     vehicle: '1970 Chevrolet C10',
     review: 'I brought my C10 to Pacific Hot Rod for a complete restoration. The team was professional, communicative, and delivered outstanding results. The truck looks better than it did rolling off the factory floor.',
     image: '/images/gallery_031.jpg',
     rating: 5
   },
   {
-    name: 'Robert Martinez',
+    name: 'Robert',
     vehicle: '1969 Ford Mustang',
     review: 'After years of searching for the right shop, I found Pacific Hot Rod. Their craftsmanship is unmatched in the Lower Mainland. They brought my Mustang back to life with precision and care.',
     image: '/images/gallery_013.jpg',
