@@ -27,7 +27,7 @@ const galleryImages = [
 
 export default function Gallery() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '0px', amount: 0.1 });
+  const isInView = useInView(ref, { once: true, margin: '-100px 0px 0px 0px', amount: 0 });
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const openLightbox = (index: number) => {
@@ -63,7 +63,7 @@ export default function Gallery() {
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
             className="inline-block text-primary text-base font-bold md:text-lg md:font-semibold tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4"
           >
             OUR WORK
@@ -71,7 +71,7 @@ export default function Gallery() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.3, delay: 0.05, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.2, delay: 0.03, ease: [0.4, 0, 0.2, 1] }}
             className="font-display text-3xl md:text-5xl lg:text-6xl"
           >
             PROJECT GALLERY
@@ -85,7 +85,7 @@ export default function Gallery() {
               key={index}
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.35, delay: index * 0.02, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.25, delay: index * 0.015, ease: [0.4, 0, 0.2, 1] }}
               className="group relative aspect-square overflow-hidden bg-[oklch(0.10_0.008_250)] cursor-pointer"
               onClick={() => openLightbox(index)}
             >
