@@ -35,7 +35,7 @@ export default function About() {
           >
             <div className="relative aspect-[4/3] overflow-hidden">
               <img
-                src="/images/hero-about.jpg"
+                src="/images/shop-exterior.png"
                 alt="Pacific Hot Rod restoration facility"
                 className="w-full h-full object-cover"
               />
