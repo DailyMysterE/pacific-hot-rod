@@ -30,7 +30,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 pt-20 md:pt-40 pb-12 md:pb-20">
+      <div className="container relative z-10 pt-16 md:pt-40 pb-12 md:pb-20">
         <div className="max-w-2xl lg:max-w-3xl">
           {/* Badge - Centered on mobile */}
           <motion.div
