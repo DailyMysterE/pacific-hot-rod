@@ -45,7 +45,7 @@ const services = [
 
 export default function Services() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const isInView = useInView(ref, { once: true, margin: '-100px', amount: 0.2 });
 
   return (
     <section id="services" className="py-10 md:py-28 relative overflow-hidden">
@@ -59,17 +59,17 @@ export default function Services() {
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-16">
           <motion.span
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.4 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="inline-block text-primary text-base font-bold md:text-lg md:font-semibold tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4"
           >
             WHAT WE DO
           </motion.span>
           <motion.h2
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.4, delay: 0.05 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-3xl md:text-5xl lg:text-6xl mb-3 md:mb-4"
           >
             OUR SERVICES
@@ -84,10 +84,15 @@ export default function Services() {
             return (
               <motion.div
                 key={service.number}
-                initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 1 } : {}}
-                transition={{ duration: 0.4, ease: 'easeOut' }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: 0.2 + (index * 0.08),
+                  ease: [0.22, 1, 0.36, 1]
+                }}
                 className="group relative bg-gradient-to-r from-[oklch(0.10_0.008_250)] to-[oklch(0.08_0.005_250)] border border-border/30 hover:border-primary/50 transition-all duration-300 overflow-hidden"
+                style={{ willChange: isInView ? 'auto' : 'opacity, transform' }}
               >
                 {/* Hover gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
