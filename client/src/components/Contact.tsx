@@ -191,12 +191,17 @@ export default function Contact() {
             </div>
             <span className="text-base md:text-lg">info@pacifichotrod.com</span>
           </a>
-          <div className="flex items-center gap-4 text-foreground/70">
-            <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=5650+Production+Way+Langley+BC+Canada"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 text-foreground/70 hover:text-primary transition-colors group"
+          >
+            <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <MapPin className="w-5 h-5 text-primary" />
             </div>
-            <span className="text-base md:text-lg">Langley, BC</span>
-          </div>
+            <span className="text-base md:text-lg">5650 Production Way, Langley, BC, Canada</span>
+          </a>
         </motion.div>
       </div>
     </section>

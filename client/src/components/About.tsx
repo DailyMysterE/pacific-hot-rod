@@ -80,7 +80,7 @@ export default function About() {
               className="flex items-start gap-3"
             >
               <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-              <span className="text-sm md:text-base text-foreground/50 tracking-wider">
+              <span className="text-base md:text-lg text-foreground/60">
                 {address}
               </span>
             </motion.div>
