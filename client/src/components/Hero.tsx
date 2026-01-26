@@ -94,30 +94,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Stats Bar - Fixed at bottom, compact */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-        className="absolute bottom-0 left-0 right-0 bg-[oklch(0.06_0.005_250)]/90 backdrop-blur-sm border-t border-primary/10"
-      >
-        <div className="container">
-          <div className="flex justify-center md:justify-start gap-8 md:gap-16 py-4 md:py-5">
-            <div className="text-center md:text-left">
-              <div className="font-display text-2xl md:text-3xl text-primary">20+</div>
-              <div className="text-[10px] md:text-xs text-foreground/50 tracking-wider">YEARS</div>
-            </div>
-            <div className="text-center md:text-left">
-              <div className="font-display text-2xl md:text-3xl text-primary">500+</div>
-              <div className="text-[10px] md:text-xs text-foreground/50 tracking-wider">PROJECTS</div>
-            </div>
-            <div className="text-center md:text-left">
-              <div className="font-display text-2xl md:text-3xl text-primary">100%</div>
-              <div className="text-[10px] md:text-xs text-foreground/50 tracking-wider">SATISFACTION</div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+
     </section>
   );
 }
