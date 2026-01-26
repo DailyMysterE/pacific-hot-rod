@@ -13,23 +13,23 @@ import { Quote } from 'lucide-react';
 const testimonials = [
   {
     name: 'Michael',
-    vehicle: '1967 Chevrolet Camaro SS',
-    review: 'Pacific Hot Rod transformed my Camaro beyond my expectations. The attention to detail in the bodywork and paint is exceptional. They treated my car like it was their own. Worth every penny.',
-    image: '/images/gallery_036_update.jpg',
+    vehicle: '1963 Chevrolet C10',
+    review: 'Pacific Hot Rod transformed my C10 beyond my expectations. The attention to detail in the bodywork and paint is exceptional. They treated my truck like it was their own. Worth every penny.',
+    image: '/images/testimonial-1.jpg',
     rating: 5
   },
   {
     name: 'David',
-    vehicle: '1970 Chevrolet C10',
-    review: 'I brought my C10 to Pacific Hot Rod for a complete restoration. The team was professional, communicative, and delivered outstanding results. The truck looks better than it did rolling off the factory floor.',
-    image: '/images/gallery_031.jpg',
+    vehicle: '1969 Chevrolet Chevelle',
+    review: 'I brought my Chevelle to Pacific Hot Rod for a complete restoration. The team was professional, communicative, and delivered outstanding results. The car looks better than it did rolling off the factory floor.',
+    image: '/images/testimonial-2.jpg',
     rating: 5
   },
   {
     name: 'Robert',
-    vehicle: '1969 Ford Mustang',
+    vehicle: '1968 Ford Mustang',
     review: 'After years of searching for the right shop, I found Pacific Hot Rod. Their craftsmanship is unmatched in the Lower Mainland. They brought my Mustang back to life with precision and care.',
-    image: '/images/gallery_013.jpg',
+    image: '/images/testimonial-3.jpg',
     rating: 5
   }
 ];
@@ -115,7 +115,7 @@ export default function Testimonials() {
                   <h4 className="font-display text-base md:text-lg text-foreground font-semibold mb-1">
                     {testimonial.name}
                   </h4>
-                  <p className="text-xs md:text-sm text-primary/80 tracking-wide">
+                  <p className="text-sm md:text-base text-primary font-semibold tracking-wide">
                     {testimonial.vehicle}
                   </p>
                 </div>
