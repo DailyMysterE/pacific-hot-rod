@@ -6,7 +6,6 @@
  */
 
 import { motion } from 'framer-motion';
-import { Wrench } from 'lucide-react';
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -70,42 +69,39 @@ export default function Hero() {
             hot rods, and muscle cars. Serving Greater Vancouver.
           </motion.p>
 
-          {/* CTAs - Compact */}
+          {/* CTAs with integrated stat - Premium */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-3"
+            className="flex flex-col sm:flex-row items-center gap-4 md:gap-6"
           >
             <button
               onClick={scrollToContact}
-              className="group font-display text-xs tracking-[0.15em] bg-primary text-primary-foreground px-6 py-3 md:px-8 md:py-3.5 hover:bg-primary/90 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 flex items-center justify-center gap-2"
+              className="group font-display text-sm md:text-base tracking-[0.15em] bg-primary text-primary-foreground px-10 py-4 md:px-12 md:py-5 hover:bg-primary/90 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-0.5"
             >
-              <span>START YOUR PROJECT</span>
-              <Wrench className="w-3.5 h-3.5 transition-transform group-hover:rotate-12" />
+              START YOUR PROJECT
             </button>
             <button
               onClick={scrollToGallery}
-              className="font-display text-xs tracking-[0.15em] border border-foreground/20 text-foreground/80 px-6 py-3 md:px-8 md:py-3.5 hover:border-primary hover:text-primary transition-all duration-300"
+              className="font-display text-sm md:text-base tracking-[0.15em] border-2 border-foreground/20 text-foreground/80 px-10 py-4 md:px-12 md:py-5 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300"
             >
               VIEW OUR WORK
             </button>
+            
+            {/* Stat badge integrated with buttons */}
+            <div className="hidden sm:flex items-center gap-3 ml-2 md:ml-4">
+              <div className="h-12 w-px bg-primary/20" />
+              <div className="text-left">
+                <div className="font-display text-2xl md:text-3xl text-primary leading-none">40+</div>
+                <div className="text-[10px] text-foreground/50 tracking-wider mt-0.5">YEARS</div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Single Stat - 40+ Years */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 md:left-8 md:translate-x-0 md:bottom-12"
-      >
-        <div className="text-center md:text-left bg-[oklch(0.06_0.005_250)]/80 backdrop-blur-sm border border-primary/20 px-6 py-3">
-          <div className="font-display text-3xl md:text-4xl text-primary">40+</div>
-          <div className="text-xs text-foreground/60 tracking-wider">YEARS EXPERIENCE</div>
-        </div>
-      </motion.div>
+
     </section>
   );
 }
