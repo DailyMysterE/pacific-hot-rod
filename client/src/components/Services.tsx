@@ -111,7 +111,7 @@ export default function Services() {
               </div>
 
               {/* Title */}
-              <h3 className="relative z-10 font-display text-sm md:text-base tracking-wider text-center text-foreground/80 group-hover:text-foreground transition-colors duration-300">
+              <h3 className="relative z-10 font-display text-base md:text-lg tracking-wider text-center text-foreground/80 group-hover:text-foreground transition-colors duration-300">
                 {service.title.toUpperCase()}
               </h3>
             </motion.div>

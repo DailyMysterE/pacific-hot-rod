@@ -34,10 +34,10 @@ export default function CTABanner() {
           className="flex flex-col md:flex-row md:items-center md:justify-between gap-6"
         >
           <div>
-            <span className="inline-block text-primary text-[10px] tracking-[0.3em] mb-2">
+            <span className="inline-block text-primary text-xs md:text-sm tracking-[0.3em] mb-3">
               READY TO START?
             </span>
-            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl">
               LET'S BRING YOUR <span className="text-primary">CLASSIC</span> BACK TO LIFE
             </h2>
           </div>
@@ -48,7 +48,7 @@ export default function CTABanner() {
               e.preventDefault();
               document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="group font-display text-xs tracking-[0.15em] bg-primary text-primary-foreground px-6 py-3 hover:bg-primary/90 transition-all duration-300 flex items-center gap-2 self-start md:self-center"
+            className="group font-display text-sm md:text-base tracking-[0.15em] bg-primary text-primary-foreground px-6 py-3.5 hover:bg-primary/90 transition-all duration-300 flex items-center gap-2 self-start md:self-center"
           >
             <span>GET A FREE QUOTE</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
