@@ -197,10 +197,10 @@ export default function Contact() {
             rel="noopener noreferrer"
             className="flex items-center gap-4 text-foreground/70 hover:text-primary transition-colors group"
           >
-            <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+            <div className="w-12 h-12 flex-shrink-0 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <MapPin className="w-5 h-5 text-primary" />
             </div>
-            <span className="text-base md:text-lg">5650 Production Way, Langley, BC, Canada</span>
+            <span className="text-sm md:text-lg whitespace-nowrap">5650 Production Way, Langley, BC</span>
           </a>
         </motion.div>
       </div>
