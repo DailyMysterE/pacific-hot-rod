@@ -64,7 +64,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.3, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="text-foreground/60 text-base md:text-xl leading-relaxed mb-6 md:mb-8 max-w-2xl"
+              className="text-foreground/60 text-lg md:text-2xl leading-relaxed mb-6 md:mb-8 max-w-2xl font-medium"
             >
               Pacific Hot Rod is Langley's premier automotive restoration facility. 
               Our team combines decades of experience with genuine passion for vintage 

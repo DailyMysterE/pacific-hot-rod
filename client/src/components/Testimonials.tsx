@@ -92,7 +92,7 @@ export default function Testimonials() {
                 </div>
 
                 {/* Review Text */}
-                <p className="text-foreground/70 text-base md:text-lg leading-relaxed mb-5 md:mb-6">
+                <p className="text-foreground/70 text-lg md:text-xl leading-relaxed mb-5 md:mb-6 font-medium">
                   "{testimonial.review}"
                 </p>
 

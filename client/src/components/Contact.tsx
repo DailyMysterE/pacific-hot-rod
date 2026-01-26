@@ -66,7 +66,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.3, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="text-base md:text-xl text-foreground/60 max-w-2xl mx-auto"
+            className="text-lg md:text-2xl text-foreground/60 max-w-2xl mx-auto font-medium"
           >
             Ready to bring your classic back to life? Fill out the form below and we'll get back to you within 24 hours.
           </motion.p>
