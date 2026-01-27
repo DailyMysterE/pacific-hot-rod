@@ -1,7 +1,7 @@
-# Increase Header Logo Size Slightly
+# Increase Header Logo Size More
 
 ## Current → Target
-- Header: h-12 md:h-16 lg:h-12 → h-14 md:h-18 lg:h-14
+- Header: h-14 md:h-18 lg:h-14 → h-16 md:h-20 lg:h-16
 
 ## Tasks
 - [ ] Update header logo size
