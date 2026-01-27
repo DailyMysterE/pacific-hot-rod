@@ -1,11 +1,10 @@
-# Fix Mobile Header Layout
+# Fix Off-Centered Buttons on Mobile
 
-## Changes Needed
-- Change from justify-center to justify-between on mobile
-- Logo should be on the left
-- Hamburger menu should be on the right
-- Keep desktop layout as is (justify-between)
+## Issue
+- Hero section buttons appear slightly off-centered on mobile
+- Need to check button container alignment
 
 ## Tasks
-- [x] Update nav flex layout
+- [x] Read Hero component to identify button layout
+- [x] Fix button alignment/centering
 - [ ] Save checkpoint
