@@ -239,6 +239,8 @@
   .tagline-bold {
     font-weight: 900;
     letter-spacing: 0.05em;
+    -webkit-text-stroke: 0.8px currentColor;
+    paint-order: stroke fill;
   }
   
   /* Darker royal blue for buttons only */
