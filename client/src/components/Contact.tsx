@@ -360,10 +360,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Info Text */}
-          <p className="text-center text-sm text-foreground/50 mt-6">
-            We will do our best to get back to you within 24 hours!
-          </p>
+
         </motion.div>
 
         {/* Divider */}
