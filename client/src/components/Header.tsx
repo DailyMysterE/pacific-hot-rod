@@ -61,8 +61,8 @@ export default function Header() {
         }`}
       >
         <div className="container">
-          <nav className="flex items-center justify-center lg:justify-between h-20 lg:h-24">
-            {/* Logo - Centered on mobile, left on desktop */}
+          <nav className="flex items-center justify-between h-20 lg:h-24">
+            {/* Logo */}
             <a 
               href="#home" 
               onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }}

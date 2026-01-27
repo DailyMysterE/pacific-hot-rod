@@ -1,10 +1,11 @@
-# Fix Mobile Logo Size
+# Fix Mobile Header Layout
 
-## Current → Target
-- Mobile: h-16 → h-10 or h-12
-- Tablet: md:h-20 → md:h-14 or md:h-16
-- Desktop: lg:h-16 (keep same)
+## Changes Needed
+- Change from justify-center to justify-between on mobile
+- Logo should be on the left
+- Hamburger menu should be on the right
+- Keep desktop layout as is (justify-between)
 
 ## Tasks
-- [ ] Reduce mobile logo size
+- [x] Update nav flex layout
 - [ ] Save checkpoint
