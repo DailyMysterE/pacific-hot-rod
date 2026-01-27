@@ -1,9 +1,8 @@
-# Adjust Tagline Color to Darker Blue
+# Change Hero Tagline to Silver
 
 ## Tasks
-- [x] Calculate new darker blue color in OKLCH format
-- [x] Update text-primary-light color in CSS
-- [x] Update text-stroke color to match
-- [x] Test readability against dark background
-- [x] Verify all taglines display correctly
+- [x] Create silver color class in CSS
+- [x] Apply silver color to hero tagline only
+- [x] Keep other taglines in darker blue
+- [x] Test appearance
 - [ ] Save checkpoint
