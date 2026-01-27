@@ -19,10 +19,10 @@ const testimonials = [
     rating: 5
   },
   {
-    name: 'David',
-    vehicle: '1969 Chevrolet Chevelle',
+    name: 'Alice',
+    vehicle: '1970 Chevrolet Chevelle SS',
     review: 'I brought my Chevelle to Pacific Hot Rod for a complete restoration. The team was professional, communicative, and delivered outstanding results. The car looks better than it did rolling off the factory floor.',
-    image: '/images/testimonial-2-chevelle.jpg',
+    image: '/images/Hotrodmodel1.webp',
     rating: 5
   },
   {
