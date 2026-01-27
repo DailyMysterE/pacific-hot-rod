@@ -7,7 +7,7 @@
  * DESIGN SYSTEM: Premium Blue & White
  * - Deep charcoal blacks (#0D0D0D) - automotive paint finish
  * - Pure white (#FFFFFF) - clean, modern accents
- * - Lighter Blue (oklch(0.62 0.18 265)) - premium, professional, trustworthy
+ * - Slightly Darker Blue (oklch(0.55 0.19 265)) - premium, professional, trustworthy
  * - Typography: Oswald (headlines), Source Sans 3 (body)
  */
 
@@ -67,8 +67,8 @@
   --popover: oklch(0.12 0.008 250);
   --popover-foreground: oklch(0.98 0 0);
   
-  /* Lighter Blue - Primary */
-  --primary: oklch(0.62 0.18 265);
+  /* Slightly Darker Blue - Primary */
+  --primary: oklch(0.55 0.19 265);
   --primary-foreground: oklch(0.98 0 0);
   
   /* Pure White - Secondary */
@@ -88,10 +88,10 @@
   
   --border: oklch(0.25 0.01 250);
   --input: oklch(0.20 0.01 250);
-  --ring: oklch(0.62 0.18 265);
+  --ring: oklch(0.55 0.19 265);
   
   /* Chart colors */
-  --chart-1: oklch(0.62 0.18 265);
+  --chart-1: oklch(0.55 0.19 265);
   --chart-2: oklch(0.98 0 0);
   --chart-3: oklch(0.55 0.15 265);
   --chart-4: oklch(0.35 0.15 265);
@@ -99,12 +99,12 @@
   
   --sidebar: oklch(0.10 0.005 250);
   --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.62 0.18 265);
+  --sidebar-primary: oklch(0.55 0.19 265);
   --sidebar-primary-foreground: oklch(0.98 0 0);
   --sidebar-accent: oklch(0.18 0.01 250);
   --sidebar-accent-foreground: oklch(0.98 0 0);
   --sidebar-border: oklch(0.25 0.01 250);
-  --sidebar-ring: oklch(0.62 0.18 265);
+  --sidebar-ring: oklch(0.55 0.19 265);
 }
 
 .dark {
@@ -114,7 +114,7 @@
   --card-foreground: oklch(0.98 0 0);
   --popover: oklch(0.12 0.008 250);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.62 0.18 265);
+  --primary: oklch(0.55 0.19 265);
   --primary-foreground: oklch(0.98 0 0);
   --secondary: oklch(0.98 0 0);
   --secondary-foreground: oklch(0.12 0.008 250);
@@ -126,15 +126,15 @@
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.25 0.01 250);
   --input: oklch(0.20 0.01 250);
-  --ring: oklch(0.62 0.18 265);
+  --ring: oklch(0.55 0.19 265);
   --sidebar: oklch(0.10 0.005 250);
   --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.62 0.18 265);
+  --sidebar-primary: oklch(0.55 0.19 265);
   --sidebar-primary-foreground: oklch(0.98 0 0);
   --sidebar-accent: oklch(0.18 0.01 250);
   --sidebar-accent-foreground: oklch(0.98 0 0);
   --sidebar-border: oklch(0.25 0.01 250);
-  --sidebar-ring: oklch(0.62 0.18 265);
+  --sidebar-ring: oklch(0.55 0.19 265);
 }
 
 @layer base {
@@ -206,11 +206,11 @@
   }
   
   .text-blue {
-    color: oklch(0.62 0.18 265);
+    color: oklch(0.55 0.19 265);
   }
   
   .bg-blue {
-    background-color: oklch(0.62 0.18 265);
+    background-color: oklch(0.55 0.19 265);
   }
   
   .text-white {
@@ -222,12 +222,12 @@
   }
   
   .border-blue {
-    border-color: oklch(0.62 0.18 265);
+    border-color: oklch(0.55 0.19 265);
   }
   
   /* Darker blue for taglines - still readable */
   .text-primary-light {
-    color: oklch(0.62 0.18 265);
+    color: oklch(0.55 0.19 265);
   }
   
   /* Maximum bold for taglines */
@@ -238,8 +238,8 @@
   /* Enhanced bold appearance for taglines */
   .tagline-bold {
     font-weight: 900;
-    -webkit-text-stroke: 0.5px oklch(0.62 0.18 265);
-    text-shadow: 0 0 1px oklch(0.62 0.18 265);
+    -webkit-text-stroke: 0.5px oklch(0.55 0.19 265);
+    text-shadow: 0 0 1px oklch(0.55 0.19 265);
     letter-spacing: 0.05em;
   }
   
@@ -307,7 +307,7 @@
     top: 0;
     bottom: 0;
     width: 4px;
-    background: linear-gradient(180deg, oklch(0.62 0.18 265), oklch(0.52 0.16 265));
+    background: linear-gradient(180deg, oklch(0.55 0.19 265), oklch(0.52 0.16 265));
   }
 }
 
