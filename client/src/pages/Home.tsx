@@ -18,7 +18,7 @@ import Gallery from '@/components/Gallery';
 
 import About from '@/components/About';
 import Testimonials from '@/components/Testimonials';
-import CTABanner from '@/components/CTABanner';
+
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -37,8 +37,6 @@ export default function Home() {
         <About />
         <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
         <Testimonials />
-        <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-        <CTABanner />
         <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
         <Contact />
       </main>

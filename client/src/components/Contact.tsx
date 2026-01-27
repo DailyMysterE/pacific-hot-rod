@@ -50,9 +50,9 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="inline-block text-primary-light text-base font-black md:text-lg md:font-black tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4 tagline-bold"
+            className="inline-block text-primary-light text-base font-black md:text-lg md:font-black tracking-[0.15em] md:tracking-[0.3em] mb-4 tagline-bold"
           >
-            GET IN TOUCH
+            READY TO START?
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -60,7 +60,7 @@ export default function Contact() {
             transition={{ duration: 0.3, delay: 0.05, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="font-display text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-6"
           >
-            START YOUR PROJECT
+            LET'S BRING YOUR <span className="text-primary">CLASSIC</span> BACK TO LIFE
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
