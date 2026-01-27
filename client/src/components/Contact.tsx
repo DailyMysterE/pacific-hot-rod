@@ -371,31 +371,31 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-8"
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-12 lg:gap-16"
         >
           <a
             href="tel:604-217-2379"
-            className="flex items-center gap-4 text-foreground/70 hover:text-primary transition-colors group"
+            className="flex items-center gap-5 text-foreground/80 hover:text-primary transition-all duration-300 group"
           >
-            <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <Phone className="w-5 h-5 text-primary" />
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary/50 group-hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/10">
+              <Phone className="w-6 h-6 md:w-7 md:h-7 text-primary" />
             </div>
             <div>
-              <div className="text-xs tracking-wider text-foreground/40 font-display">CALL US</div>
-              <div className="text-base md:text-lg font-medium">604-217-2379</div>
+              <div className="text-xs md:text-sm tracking-widest text-foreground/50 font-display uppercase mb-1">CALL US</div>
+              <div className="text-lg md:text-xl lg:text-2xl font-semibold">604-217-2379</div>
             </div>
           </a>
 
           <a
             href="mailto:info@pacifichotrod.com"
-            className="flex items-center gap-4 text-foreground/70 hover:text-primary transition-colors group"
+            className="flex items-center gap-5 text-foreground/80 hover:text-primary transition-all duration-300 group"
           >
-            <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <Mail className="w-5 h-5 text-primary" />
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary/50 group-hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/10">
+              <Mail className="w-6 h-6 md:w-7 md:h-7 text-primary" />
             </div>
             <div>
-              <div className="text-xs tracking-wider text-foreground/40 font-display">EMAIL US</div>
-              <div className="text-base md:text-lg font-medium">info@pacifichotrod.com</div>
+              <div className="text-xs md:text-sm tracking-widest text-foreground/50 font-display uppercase mb-1">EMAIL US</div>
+              <div className="text-lg md:text-xl lg:text-2xl font-semibold">info@pacifichotrod.com</div>
             </div>
           </a>
 
@@ -403,14 +403,14 @@ export default function Contact() {
             href="https://www.google.com/maps/search/?api=1&query=5650+Production+Way+Langley+BC+Canada"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 text-foreground/70 hover:text-primary transition-colors group"
+            className="flex items-center gap-5 text-foreground/80 hover:text-primary transition-all duration-300 group"
           >
-            <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <MapPin className="w-5 h-5 text-primary" />
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary/50 group-hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/10">
+              <MapPin className="w-6 h-6 md:w-7 md:h-7 text-primary" />
             </div>
             <div>
-              <div className="text-xs tracking-wider text-foreground/40 font-display">VISIT US</div>
-              <div className="text-base md:text-lg font-medium">Langley, BC</div>
+              <div className="text-xs md:text-sm tracking-widest text-foreground/50 font-display uppercase mb-1">VISIT US</div>
+              <div className="text-lg md:text-xl lg:text-2xl font-semibold">Langley, BC</div>
             </div>
           </a>
         </motion.div>
