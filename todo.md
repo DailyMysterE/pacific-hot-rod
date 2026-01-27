@@ -1,10 +1,10 @@
-# Fix Off-Centered Buttons on Mobile
+# Change Button Alignment to Left on Mobile
 
-## Issue
-- Hero section buttons appear slightly off-centered on mobile
-- Need to check button container alignment
+## Changes Needed
+- Buttons should be left-aligned on mobile (not centered)
+- Keep full-width stacked layout
+- Maintain centered alignment on desktop
 
 ## Tasks
-- [x] Read Hero component to identify button layout
-- [x] Fix button alignment/centering
+- [ ] Update button container alignment
 - [ ] Save checkpoint
