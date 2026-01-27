@@ -1,5 +1,6 @@
-# Change Hero Tagline to White
+# Change Hero Tagline to Amber/Orange
 
 ## Tasks
-- [x] Update silver color to white in CSS
+- [x] Calculate original amber/orange color in OKLCH
+- [x] Update hero tagline color to amber/orange
 - [ ] Save checkpoint

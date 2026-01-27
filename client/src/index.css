@@ -248,12 +248,12 @@
     color: oklch(0.75 0.02 265);
   }
   
-  /* White tagline bold styling for hero */
+  /* Amber/Orange tagline bold styling for hero */
   .tagline-bold-silver {
     font-weight: 900;
-    color: oklch(1.0 0 0);
-    -webkit-text-stroke: 0.5px oklch(1.0 0 0);
-    text-shadow: 0 0 1px oklch(1.0 0 0);
+    color: oklch(0.72 0.18 75);
+    -webkit-text-stroke: 0.5px oklch(0.72 0.18 75);
+    text-shadow: 0 0 1px oklch(0.72 0.18 75);
     letter-spacing: 0.05em;
   }
   
