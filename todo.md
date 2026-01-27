@@ -1,10 +1,9 @@
-# Restore Full Width Buttons on Mobile
+# Reduce Hero Tagline Boldness on Mobile
 
 ## Changes Needed
-- Add w-full to buttons on mobile
-- Keep buttons centered
-- Buttons should be full-width on mobile, auto-width on desktop
+- Reduce font-black (900) to font-extrabold (800) on mobile
+- Keep desktop weight the same or adjust both
 
 ## Tasks
-- [x] Add w-full sm:w-auto to both buttons
+- [x] Update Hero tagline font weight for mobile (font-extrabold on mobile, font-black on desktop)
 - [ ] Save checkpoint
