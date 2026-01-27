@@ -1,7 +1,10 @@
-# Reduce Hero Tagline Boldness
+# Replace Logo with New PacificHotRodLogo.png
 
 ## Tasks
-- [x] Reduce font weight from 900 to 800
-- [x] Reduce text-stroke from 0.5px to 0.3px
-- [x] Test appearance
+- [x] Find all logo references in code
+- [x] Check current logo dimensions
+- [x] Copy new logo to client/public/images/
+- [x] Update logo references in components
+- [x] Verify logo displays at same size
+- [x] Test on all pages
 - [ ] Save checkpoint
