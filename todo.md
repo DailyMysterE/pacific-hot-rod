@@ -1,8 +1,10 @@
-# Increase Header Logo Size More
+# Fix Mobile Logo Size
 
 ## Current → Target
-- Header: h-14 md:h-18 lg:h-14 → h-16 md:h-20 lg:h-16
+- Mobile: h-16 → h-10 or h-12
+- Tablet: md:h-20 → md:h-14 or md:h-16
+- Desktop: lg:h-16 (keep same)
 
 ## Tasks
-- [ ] Update header logo size
+- [ ] Reduce mobile logo size
 - [ ] Save checkpoint
