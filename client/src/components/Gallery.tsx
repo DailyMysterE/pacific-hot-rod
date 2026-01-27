@@ -1,5 +1,5 @@
 /*
- * DESIGN: Ultra-Premium Industrial Heritage
+ * DESIGN: Premium Blue & White
  * - Simple gallery grid without filters
  * - Larger text sizes
  * - Elegant lightbox

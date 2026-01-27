@@ -1,5 +1,5 @@
 /*
- * DESIGN: Ultra-Premium Industrial Heritage
+ * DESIGN: Premium Blue & White
  * - Centered contact form layout
  * - Contact info below form in center
  * - Enhanced visual hierarchy

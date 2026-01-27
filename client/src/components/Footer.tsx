@@ -1,5 +1,5 @@
 /*
- * DESIGN: Ultra-Premium Industrial Heritage
+ * DESIGN: Premium Blue & White
  * - Minimal centered footer
  * - Logo and copyright only
  */

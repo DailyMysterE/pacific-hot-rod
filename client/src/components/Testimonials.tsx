@@ -1,5 +1,5 @@
 /*
- * DESIGN: Ultra-Premium Industrial Heritage
+ * DESIGN: Premium Blue & White
  * - Clean testimonial cards with vehicle photos
  * - Mobile-optimized layout
  * - Authentic client reviews

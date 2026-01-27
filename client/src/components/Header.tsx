@@ -1,5 +1,5 @@
 /*
- * DESIGN: Ultra-Premium Industrial Heritage
+ * DESIGN: Premium Blue & White
  * - Sleek glass-morphism navbar with subtle border glow
  * - No top bar - cleaner, more premium look
  * - Refined typography and spacing

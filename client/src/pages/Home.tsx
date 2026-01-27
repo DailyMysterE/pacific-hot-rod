@@ -1,11 +1,11 @@
 /*
- * DESIGN: Industrial Heritage Aesthetic
+ * DESIGN: Premium Blue & White Aesthetic
  * Pacific Hot Rod - Premium Automotive Restoration Website
  * 
  * Design Philosophy:
  * - Deep charcoal blacks (#0D0D0D) - automotive paint finish
- * - Chrome silver (#C0C0C0) - polished metal accents
- * - Racing amber/gold (#D4A84B) - warm, nostalgic, premium
+ * - Pure white (#FFFFFF) - clean, modern accents
+ * - Royal Blue (#1d32a0) - premium, professional, trustworthy
  * - Oswald for headlines, Source Sans 3 for body
  * - Asymmetric layouts with full-bleed imagery
  * - Heavy, mechanical animations

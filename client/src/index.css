@@ -4,10 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * DESIGN SYSTEM: Industrial Heritage Aesthetic
+ * DESIGN SYSTEM: Premium Blue & White
  * - Deep charcoal blacks (#0D0D0D) - automotive paint finish
- * - Chrome silver (#C0C0C0) - polished metal accents
- * - Racing amber/gold (#D4A84B) - warm, nostalgic, premium
+ * - Pure white (#FFFFFF) - clean, modern accents
+ * - Royal Blue (#1d32a0) - premium, professional, trustworthy
  * - Typography: Oswald (headlines), Source Sans 3 (body)
  */
 
@@ -49,7 +49,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   
-  /* Custom colors for Industrial Heritage theme */
+  /* Custom colors for Premium Blue & White theme */
   --font-sans: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Oswald', ui-sans-serif, system-ui, sans-serif;
 }
@@ -57,22 +57,22 @@
 :root {
   --radius: 0.25rem;
   
-  /* Industrial Heritage - Dark Theme as default */
+  /* Premium Blue & White - Dark Theme as default */
   --background: oklch(0.08 0.005 250);
-  --foreground: oklch(0.95 0.005 250);
+  --foreground: oklch(0.98 0 0);
   
   --card: oklch(0.12 0.008 250);
-  --card-foreground: oklch(0.95 0.005 250);
+  --card-foreground: oklch(0.98 0 0);
   
   --popover: oklch(0.12 0.008 250);
-  --popover-foreground: oklch(0.95 0.005 250);
+  --popover-foreground: oklch(0.98 0 0);
   
-  /* Racing Amber/Gold - Primary */
-  --primary: oklch(0.72 0.14 75);
-  --primary-foreground: oklch(0.12 0.008 250);
+  /* Royal Blue #1d32a0 - Primary */
+  --primary: oklch(0.45 0.20 265);
+  --primary-foreground: oklch(0.98 0 0);
   
-  /* Chrome Silver - Secondary */
-  --secondary: oklch(0.78 0.01 250);
+  /* Pure White - Secondary */
+  --secondary: oklch(0.98 0 0);
   --secondary-foreground: oklch(0.12 0.008 250);
   
   /* Slate Gray - Muted */
@@ -81,60 +81,60 @@
   
   /* Accent - slightly lighter charcoal */
   --accent: oklch(0.18 0.01 250);
-  --accent-foreground: oklch(0.95 0.005 250);
+  --accent-foreground: oklch(0.98 0 0);
   
   --destructive: oklch(0.55 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
   
   --border: oklch(0.25 0.01 250);
   --input: oklch(0.20 0.01 250);
-  --ring: oklch(0.72 0.14 75);
+  --ring: oklch(0.45 0.20 265);
   
   /* Chart colors */
-  --chart-1: oklch(0.72 0.14 75);
-  --chart-2: oklch(0.78 0.01 250);
-  --chart-3: oklch(0.55 0.12 75);
-  --chart-4: oklch(0.45 0.01 250);
-  --chart-5: oklch(0.35 0.01 250);
+  --chart-1: oklch(0.45 0.20 265);
+  --chart-2: oklch(0.98 0 0);
+  --chart-3: oklch(0.55 0.15 265);
+  --chart-4: oklch(0.35 0.15 265);
+  --chart-5: oklch(0.25 0.10 265);
   
   --sidebar: oklch(0.10 0.005 250);
-  --sidebar-foreground: oklch(0.95 0.005 250);
-  --sidebar-primary: oklch(0.72 0.14 75);
-  --sidebar-primary-foreground: oklch(0.12 0.008 250);
+  --sidebar-foreground: oklch(0.98 0 0);
+  --sidebar-primary: oklch(0.45 0.20 265);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
   --sidebar-accent: oklch(0.18 0.01 250);
-  --sidebar-accent-foreground: oklch(0.95 0.005 250);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
   --sidebar-border: oklch(0.25 0.01 250);
-  --sidebar-ring: oklch(0.72 0.14 75);
+  --sidebar-ring: oklch(0.45 0.20 265);
 }
 
 .dark {
   --background: oklch(0.08 0.005 250);
-  --foreground: oklch(0.95 0.005 250);
+  --foreground: oklch(0.98 0 0);
   --card: oklch(0.12 0.008 250);
-  --card-foreground: oklch(0.95 0.005 250);
+  --card-foreground: oklch(0.98 0 0);
   --popover: oklch(0.12 0.008 250);
-  --popover-foreground: oklch(0.95 0.005 250);
-  --primary: oklch(0.72 0.14 75);
-  --primary-foreground: oklch(0.12 0.008 250);
-  --secondary: oklch(0.78 0.01 250);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.45 0.20 265);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.98 0 0);
   --secondary-foreground: oklch(0.12 0.008 250);
   --muted: oklch(0.25 0.01 250);
   --muted-foreground: oklch(0.65 0.01 250);
   --accent: oklch(0.18 0.01 250);
-  --accent-foreground: oklch(0.95 0.005 250);
+  --accent-foreground: oklch(0.98 0 0);
   --destructive: oklch(0.55 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.25 0.01 250);
   --input: oklch(0.20 0.01 250);
-  --ring: oklch(0.72 0.14 75);
+  --ring: oklch(0.45 0.20 265);
   --sidebar: oklch(0.10 0.005 250);
-  --sidebar-foreground: oklch(0.95 0.005 250);
-  --sidebar-primary: oklch(0.72 0.14 75);
-  --sidebar-primary-foreground: oklch(0.12 0.008 250);
+  --sidebar-foreground: oklch(0.98 0 0);
+  --sidebar-primary: oklch(0.45 0.20 265);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
   --sidebar-accent: oklch(0.18 0.01 250);
-  --sidebar-accent-foreground: oklch(0.95 0.005 250);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
   --sidebar-border: oklch(0.25 0.01 250);
-  --sidebar-ring: oklch(0.72 0.14 75);
+  --sidebar-ring: oklch(0.45 0.20 265);
 }
 
 @layer base {
@@ -200,29 +200,29 @@
     }
   }
   
-  /* Custom utility classes for Industrial Heritage theme */
+  /* Custom utility classes for Premium Blue & White theme */
   .font-display {
     font-family: 'Oswald', ui-sans-serif, system-ui, sans-serif;
   }
   
-  .text-gold {
-    color: oklch(0.72 0.14 75);
+  .text-blue {
+    color: oklch(0.45 0.20 265);
   }
   
-  .bg-gold {
-    background-color: oklch(0.72 0.14 75);
+  .bg-blue {
+    background-color: oklch(0.45 0.20 265);
   }
   
-  .text-chrome {
-    color: oklch(0.78 0.01 250);
+  .text-white {
+    color: oklch(0.98 0 0);
   }
   
-  .bg-chrome {
-    background-color: oklch(0.78 0.01 250);
+  .bg-white {
+    background-color: oklch(0.98 0 0);
   }
   
-  .border-gold {
-    border-color: oklch(0.72 0.14 75);
+  .border-blue {
+    border-color: oklch(0.45 0.20 265);
   }
   
   /* Grain texture overlay */
@@ -240,15 +240,15 @@
     mix-blend-mode: overlay;
   }
   
-  /* Chrome border effect */
-  .chrome-border {
-    border: 1px solid oklch(0.78 0.01 250 / 0.3);
+  /* Blue border effect */
+  .blue-border {
+    border: 1px solid oklch(0.45 0.20 265 / 0.3);
     box-shadow: 
       inset 0 1px 0 oklch(1 0 0 / 0.1),
       0 1px 3px oklch(0 0 0 / 0.3);
   }
   
-  /* Racing stripe accent */
+  /* Racing stripe accent - now blue */
   .racing-stripe {
     position: relative;
   }
@@ -260,7 +260,7 @@
     top: 0;
     bottom: 0;
     width: 4px;
-    background: linear-gradient(180deg, oklch(0.72 0.14 75), oklch(0.62 0.12 75));
+    background: linear-gradient(180deg, oklch(0.45 0.20 265), oklch(0.35 0.18 265));
   }
 }
 
@@ -290,6 +290,6 @@ html {
 
 /* Selection color */
 ::selection {
-  background: oklch(0.72 0.14 75 / 0.3);
-  color: oklch(0.95 0.005 250);
+  background: oklch(0.45 0.20 265 / 0.3);
+  color: oklch(0.98 0 0);
 }

@@ -1,5 +1,5 @@
 /*
- * DESIGN: Ultra-Premium Industrial Heritage
+ * DESIGN: Premium Blue & White
  * - Compact hero that doesn't require excessive scrolling
  * - Refined typography and spacing
  * - Elegant stats bar

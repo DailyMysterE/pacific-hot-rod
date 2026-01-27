@@ -1,5 +1,5 @@
 /*
- * DESIGN: Ultra-Premium Industrial Heritage
+ * DESIGN: Premium Blue & White
  * - Redesigned premium service list with horizontal cards
  * - Elegant numbered design with descriptions
  * - Fully responsive for all platforms
