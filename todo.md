@@ -1,13 +1,9 @@
-# Make Taglines Maximum Bold
+# Adjust Tagline Color to Darker Blue
 
 ## Tasks
-- [x] Add custom CSS class with font-weight: 900
-- [x] Apply to Hero tagline
-- [x] Apply to Services tagline
-- [x] Apply to Gallery tagline
-- [x] Apply to About tagline
-- [x] Apply to Testimonials tagline
-- [x] Apply to Contact tagline
-- [x] Apply to CTA Banner tagline
-- [x] Test appearance
+- [x] Calculate new darker blue color in OKLCH format
+- [x] Update text-primary-light color in CSS
+- [x] Update text-stroke color to match
+- [x] Test readability against dark background
+- [x] Verify all taglines display correctly
 - [ ] Save checkpoint
