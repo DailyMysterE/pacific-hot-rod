@@ -10,7 +10,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { MapPin } from 'lucide-react';
 
-const address = '5650 Production Way, Langley, BC, Canada';
+const address = '5650 Production Way, Langley, BC';
 
 export default function About() {
   const ref = useRef(null);
