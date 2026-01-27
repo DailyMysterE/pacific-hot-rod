@@ -29,15 +29,15 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent md:mt-8" />
+        <div className="h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent md:mt-8" />
         <Services />
-        <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
         <Gallery />
-        <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
         <About />
-        <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
         <Testimonials />
-        <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
         <Contact />
       </main>
       <Footer />
