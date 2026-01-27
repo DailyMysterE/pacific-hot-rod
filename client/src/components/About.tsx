@@ -17,7 +17,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '0px', amount: 0.1 });
 
   return (
-    <section id="about" className="py-10 md:py-28 relative overflow-hidden">
+    <section id="about" className="py-10 md:pt-28 md:pb-12 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[oklch(0.08_0.005_250)]" />
 

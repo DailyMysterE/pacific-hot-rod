@@ -39,7 +39,7 @@ export default function Testimonials() {
   const isInView = useInView(ref, { once: true, margin: '-150px 0px 0px 0px', amount: 0 });
 
   return (
-    <section id="testimonials" className="py-10 md:py-28 relative overflow-hidden">
+    <section id="testimonials" className="py-10 md:pt-28 md:pb-12 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[oklch(0.06_0.005_250)]" />
 
