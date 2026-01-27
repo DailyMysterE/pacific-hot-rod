@@ -7,7 +7,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, ChevronRight, ChevronLeft, Check } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -21,6 +21,7 @@ const steps = [
 
 export default function Contact() {
   const ref = useRef(null);
+  const formCardRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '0px', amount: 0.1 });
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -70,6 +71,13 @@ export default function Contact() {
       setCurrentStep(currentStep - 1);
     }
   };
+
+  // Auto-scroll to form card when step changes
+  useEffect(() => {
+    if (formCardRef.current) {
+      formCardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [currentStep]);
 
   const canProceed = () => {
     switch (currentStep) {
@@ -155,7 +163,7 @@ export default function Contact() {
           </div>
 
           {/* Form Card */}
-          <div className="bg-[oklch(0.10_0.008_250)] border-2 border-primary/20 p-8 md:p-12 shadow-2xl">
+          <div ref={formCardRef} className="bg-[oklch(0.10_0.008_250)] border-2 border-primary/20 p-8 md:p-12 shadow-2xl">
             <AnimatePresence mode="wait">
               {/* Step 1: Name */}
               {currentStep === 1 && (
