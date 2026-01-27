@@ -1,8 +1,5 @@
-# Change Hero Tagline to Silver
+# Change Hero Tagline to White
 
 ## Tasks
-- [x] Create silver color class in CSS
-- [x] Apply silver color to hero tagline only
-- [x] Keep other taglines in darker blue
-- [x] Test appearance
+- [x] Update silver color to white in CSS
 - [ ] Save checkpoint
