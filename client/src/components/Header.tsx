@@ -69,9 +69,9 @@ export default function Header() {
               className="relative z-10 group"
             >
               <img 
-                src="/images/pacific-hot-rod-logo.png" 
+                src="/images/pacific-hot-rod-logo.webp" 
                 alt="Pacific Hot Rod" 
-                className="h-10 md:h-14 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-12 md:h-18 w-auto transition-transform duration-300 group-hover:scale-105"
               />
             </a>
 

@@ -13,9 +13,9 @@ export default function NotFound() {
         {/* Logo */}
         <Link href="/">
           <img
-            src="/images/pacific-hot-rod-logo.png"
+            src="/images/pacific-hot-rod-logo.webp"
             alt="Pacific Hot Rod"
-            className="h-16 w-auto mx-auto mb-12"
+            className="h-20 w-auto mx-auto mb-12"
           />
         </Link>
 
