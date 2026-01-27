@@ -93,8 +93,8 @@ export default function Hero() {
             <div className="hidden sm:flex items-center gap-3 ml-2 md:ml-4">
               <div className="h-12 w-px bg-primary/20" />
               <div className="text-left">
-                <div className="font-display text-3xl md:text-4xl font-bold text-primary leading-none">40+</div>
-                <div className="text-base md:text-lg font-semibold text-foreground/70 tracking-wider mt-0.5">YEARS<br/>EXPERIENCE</div>
+                <div className="font-display text-3xl md:text-4xl font-bold text-primary leading-none">200+</div>
+                <div className="text-base md:text-lg font-semibold text-foreground/70 tracking-wider mt-0.5">YEARS OF<br/>COMBINED EXPERIENCE</div>
               </div>
             </div>
           </motion.div>
@@ -108,8 +108,8 @@ export default function Hero() {
           >
             <div className="h-px w-8 bg-primary/20" />
             <div className="text-center">
-              <div className="font-display text-3xl font-bold text-primary leading-none">40+</div>
-              <div className="text-sm font-semibold text-foreground/70 tracking-wider mt-0.5">YEARS EXPERIENCE</div>
+              <div className="font-display text-3xl font-bold text-primary leading-none">200+</div>
+              <div className="text-sm font-semibold text-foreground/70 tracking-wider mt-0.5">YEARS OF COMBINED EXPERIENCE</div>
             </div>
             <div className="h-px w-8 bg-primary/20" />
           </motion.div>
