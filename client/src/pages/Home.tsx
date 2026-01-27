@@ -39,6 +39,7 @@ export default function Home() {
         <Testimonials />
         <div className="h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
         <Contact />
+        <div className="h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       </main>
       <Footer />
       <ScrollToTop />
