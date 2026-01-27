@@ -238,8 +238,6 @@
   /* Enhanced bold appearance for taglines */
   .tagline-bold {
     font-weight: 900;
-    -webkit-text-stroke: 0.5px oklch(0.55 0.19 265);
-    text-shadow: 0 0 1px oklch(0.55 0.19 265);
     letter-spacing: 0.05em;
   }
   
