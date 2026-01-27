@@ -374,7 +374,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-12 lg:gap-16"
+          className="flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-8 lg:gap-16"
         >
           <a
             href="tel:604-217-2379"

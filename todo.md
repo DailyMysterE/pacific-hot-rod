@@ -1,18 +1,13 @@
-# Optimize Mobile Menu Performance
+# Tablet Contact Section Layout Update
 
-## Issues
-- Mobile menu feels laggy when opening/closing
-- Need smoother, snappier animations
+## Task
+- [ ] Change contact information section (CALL US, EMAIL US, VISIT US) to vertical stacked layout on tablets only
+- [ ] Keep mobile layout unchanged (already vertical)
+- [ ] Keep desktop layout horizontal (lg: breakpoint)
+- [ ] Verify all three layouts work correctly
 
-## Optimizations to Apply
-- Reduce animation duration for faster response
-- Use GPU-accelerated properties (transform, opacity)
-- Simplify framer-motion animations
-- Add will-change CSS hints
-- Reduce backdrop blur if present
-
-## Tasks
-- [x] Read Header component to analyze current menu implementation
-- [x] Optimize animation durations and easing (smoother cubic-bezier)
-- [x] Apply performance improvements (will-change hints for GPU acceleration)
-- [ ] Save checkpoint
+## Implementation
+- [ ] Update Contact.tsx component
+- [ ] Change from `sm:flex-row` to `lg:flex-row` for the contact info container
+- [ ] This will make tablets use the vertical (flex-col) layout like mobile
+- [ ] Desktop (lg: and above) will use horizontal layout
