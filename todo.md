@@ -1,9 +1,18 @@
-# Reduce Hero Tagline Boldness on Mobile
+# Optimize Mobile Menu Performance
 
-## Changes Needed
-- Reduce font-black (900) to font-extrabold (800) on mobile
-- Keep desktop weight the same or adjust both
+## Issues
+- Mobile menu feels laggy when opening/closing
+- Need smoother, snappier animations
+
+## Optimizations to Apply
+- Reduce animation duration for faster response
+- Use GPU-accelerated properties (transform, opacity)
+- Simplify framer-motion animations
+- Add will-change CSS hints
+- Reduce backdrop blur if present
 
 ## Tasks
-- [x] Update Hero tagline font weight for mobile (font-extrabold on mobile, font-black on desktop)
+- [x] Read Header component to analyze current menu implementation
+- [x] Optimize animation durations and easing (smoother cubic-bezier)
+- [x] Apply performance improvements (will-change hints for GPU acceleration)
 - [ ] Save checkpoint

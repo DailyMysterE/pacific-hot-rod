@@ -118,8 +118,8 @@ export default function Header() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:hidden fixed inset-0 bg-black z-[100] overflow-y-auto"
+            transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
+            className="lg:hidden fixed inset-0 bg-black z-[100] overflow-y-auto will-change-[opacity]"
           >
             {/* Subtle gradient overlay for depth */}
             <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-primary/10 pointer-events-none" />
@@ -140,8 +140,8 @@ export default function Header() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="min-h-screen flex items-center justify-center px-6 py-20"
+              transition={{ duration: 0.25, delay: 0.05, ease: [0.4, 0, 0.2, 1] }}
+              className="min-h-screen flex items-center justify-center px-6 py-20 will-change-[opacity,transform]"
             >
               <div className="w-full max-w-md">
                 {/* Navigation Links */}
