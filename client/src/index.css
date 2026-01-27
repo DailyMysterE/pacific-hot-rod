@@ -225,6 +225,11 @@
     border-color: oklch(0.45 0.20 265);
   }
   
+  /* Lighter blue for taglines - better readability */
+  .text-primary-light {
+    color: oklch(0.70 0.18 265);
+  }
+  
   /* Grain texture overlay */
   .grain-overlay {
     position: relative;
