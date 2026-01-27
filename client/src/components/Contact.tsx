@@ -8,7 +8,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Phone, Mail, MapPin, ChevronRight, Check } from 'lucide-react';
+import { Phone, Mail, MapPin, ChevronRight, ChevronLeft, Check } from 'lucide-react';
 import { toast } from 'sonner';
 
 const steps = [
@@ -62,6 +62,12 @@ export default function Contact() {
       setCurrentStep(currentStep + 1);
     } else {
       handleSubmit();
+    }
+  };
+
+  const prevStep = () => {
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);
     }
   };
 
@@ -323,13 +329,23 @@ export default function Contact() {
               )}
             </AnimatePresence>
 
-            {/* Next Button */}
-            <div className="mt-8">
+            {/* Navigation Buttons */}
+            <div className="mt-8 flex items-center gap-4">
+              {currentStep > 1 && (
+                <button
+                  type="button"
+                  onClick={prevStep}
+                  className="font-display text-base md:text-lg tracking-[0.15em] border-2 border-border/50 text-foreground/80 hover:border-primary hover:text-primary px-6 md:px-8 py-4 transition-all duration-300 flex items-center gap-2"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                  <span>BACK</span>
+                </button>
+              )}
               <button
                 type="button"
                 onClick={nextStep}
                 disabled={!canProceed() || isSubmitting}
-                className="w-full font-display text-base md:text-lg tracking-[0.15em] bg-primary text-primary-foreground px-8 py-4 hover:bg-primary/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg hover:shadow-xl"
+                className="flex-1 font-display text-base md:text-lg tracking-[0.15em] bg-primary text-primary-foreground px-8 py-4 hover:bg-primary/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg hover:shadow-xl"
               >
                 {isSubmitting ? (
                   <>
