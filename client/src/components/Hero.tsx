@@ -74,7 +74,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: 0.09 }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-6"
+            className="flex flex-col sm:flex-row items-center gap-3 md:gap-6"
           >
             <button
               onClick={scrollToContact}

@@ -1,10 +1,10 @@
-# Change Button Alignment to Left on Mobile
+# Center Buttons Perfectly on Mobile
 
 ## Changes Needed
-- Buttons should be left-aligned on mobile (not centered)
-- Keep full-width stacked layout
-- Maintain centered alignment on desktop
+- Center button container on mobile
+- Keep button sizes the same
+- Maintain desktop layout
 
 ## Tasks
-- [ ] Update button container alignment
+- [ ] Update button container alignment to center
 - [ ] Save checkpoint
