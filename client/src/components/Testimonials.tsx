@@ -50,7 +50,7 @@ export default function Testimonials() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="inline-block text-primary text-base font-black md:text-lg md:font-black tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4 tagline-bold"
+            className="inline-block text-primary-light text-base font-black md:text-lg md:font-black tracking-[0.15em] md:tracking-[0.3em] mb-3 md:mb-4 tagline-bold"
           >
             CLIENT REVIEWS
           </motion.span>
@@ -101,7 +101,7 @@ export default function Testimonials() {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <svg
                       key={i}
-                      className="w-4 h-4 text-primary"
+                      className="w-4 h-4 text-primary-light"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -115,7 +115,7 @@ export default function Testimonials() {
                   <h4 className="font-display text-base md:text-lg text-foreground font-semibold mb-1">
                     {testimonial.name}
                   </h4>
-                  <p className="text-base md:text-lg text-primary font-bold tracking-wide">
+                  <p className="text-base md:text-lg text-primary-light font-bold tracking-wide">
                     {testimonial.vehicle}
                   </p>
                 </div>
