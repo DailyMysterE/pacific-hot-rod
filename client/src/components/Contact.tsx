@@ -72,9 +72,9 @@ export default function Contact() {
     }
   };
 
-  // Auto-scroll to form card when step changes
+  // Auto-scroll to form card when step changes (but not on initial load)
   useEffect(() => {
-    if (formCardRef.current) {
+    if (formCardRef.current && currentStep > 1) {
       formCardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }, [currentStep]);
