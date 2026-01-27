@@ -1,5 +1,8 @@
-# Replace Logo with New Version
+# Reduce Header Logo Size
+
+## Current → Target
+- Header: h-12 md:h-18 → h-10 md:h-16
 
 ## Tasks
-- [ ] Copy new logo file to project
+- [ ] Update Header logo size
 - [ ] Save checkpoint
