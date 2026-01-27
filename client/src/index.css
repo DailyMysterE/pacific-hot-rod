@@ -230,6 +230,11 @@
     color: oklch(0.70 0.18 265);
   }
   
+  /* Maximum bold for taglines */
+  .font-black {
+    font-weight: 900;
+  }
+  
   /* Grain texture overlay */
   .grain-overlay {
     position: relative;
