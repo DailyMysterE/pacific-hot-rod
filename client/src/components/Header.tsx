@@ -71,7 +71,7 @@ export default function Header() {
               <img 
                 src="/images/pacific-hot-rod-logo.webp" 
                 alt="Pacific Hot Rod" 
-                className="h-12 md:h-16 lg:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-14 md:h-18 lg:h-14 w-auto transition-transform duration-300 group-hover:scale-105"
               />
             </a>
 
