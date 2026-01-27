@@ -7,7 +7,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
 import { Phone, Mail, MapPin, ChevronRight, ChevronLeft, Check } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -21,10 +21,8 @@ const steps = [
 
 export default function Contact() {
   const ref = useRef(null);
-  const formCardRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '0px', amount: 0.1 });
   const [currentStep, setCurrentStep] = useState(1);
-  const isInitialMount = useRef(true);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -73,16 +71,7 @@ export default function Contact() {
     }
   };
 
-  // Auto-scroll to form card when step changes (but not on initial load)
-  useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-      return;
-    }
-    if (formCardRef.current) {
-      formCardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }, [currentStep]);
+
 
   const canProceed = () => {
     switch (currentStep) {
@@ -168,7 +157,7 @@ export default function Contact() {
           </div>
 
           {/* Form Card */}
-          <div ref={formCardRef} className="bg-[oklch(0.10_0.008_250)] border-2 border-primary/20 p-8 md:p-12 shadow-2xl">
+          <div className="bg-[oklch(0.10_0.008_250)] border-2 border-primary/20 p-8 md:p-12 shadow-2xl">
             <AnimatePresence mode="wait">
               {/* Step 1: Name */}
               {currentStep === 1 && (
@@ -189,7 +178,6 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    autoFocus
                     className="w-full bg-[oklch(0.06_0.005_250)] border-2 border-border/50 px-5 py-4 text-lg text-foreground placeholder:text-foreground/30 focus:border-primary/50 focus:outline-none transition-colors"
                     placeholder="Your full name"
                   />
@@ -216,7 +204,6 @@ export default function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      autoFocus
                       className="w-full bg-[oklch(0.06_0.005_250)] border-2 border-border/50 px-5 py-4 text-lg text-foreground placeholder:text-foreground/30 focus:border-primary/50 focus:outline-none transition-colors"
                       placeholder="your.email@example.com"
                     />
@@ -251,7 +238,6 @@ export default function Contact() {
                     name="vehicleInfo"
                     value={formData.vehicleInfo}
                     onChange={handleChange}
-                    autoFocus
                     className="w-full bg-[oklch(0.06_0.005_250)] border-2 border-border/50 px-5 py-4 text-lg text-foreground placeholder:text-foreground/30 focus:border-primary/50 focus:outline-none transition-colors"
                     placeholder="e.g., 1969 Chevrolet Camaro SS"
                   />
@@ -319,7 +305,6 @@ export default function Contact() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      autoFocus
                       rows={6}
                       className="w-full bg-[oklch(0.06_0.005_250)] border-2 border-border/50 px-5 py-4 text-base text-foreground placeholder:text-foreground/30 focus:border-primary/50 focus:outline-none transition-colors resize-none"
                       placeholder="Describe the work you need, current condition, timeline, budget, or any other important details..."
