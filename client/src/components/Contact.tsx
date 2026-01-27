@@ -366,6 +366,9 @@ export default function Contact() {
           </p>
         </motion.div>
 
+        {/* Divider */}
+        <div className="h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent my-12 md:my-16" />
+
         {/* Contact Info - Centered Below Form */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
