@@ -61,8 +61,8 @@ export default function Header() {
         }`}
       >
         <div className="container">
-          <nav className="flex items-center justify-between h-20 lg:h-20">
-            {/* Logo */}
+          <nav className="flex items-center justify-center lg:justify-between h-20 lg:h-24">
+            {/* Logo - Centered on mobile, left on desktop */}
             <a 
               href="#home" 
               onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }}
@@ -71,12 +71,12 @@ export default function Header() {
               <img 
                 src="/images/pacific-hot-rod-logo.webp" 
                 alt="Pacific Hot Rod" 
-                className="h-10 md:h-16 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-12 md:h-16 lg:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
               />
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-1 absolute lg:relative right-0 lg:right-auto">
               {navLinks.map((link) => (
                 <a
                   key={link.href}

@@ -1,8 +1,12 @@
-# Reduce Header Logo Size
+# Restore Original Logo Layout
 
-## Current → Target
-- Header: h-12 md:h-18 → h-10 md:h-16
+## Changes Needed
+- Center logo in header (currently left-aligned)
+- Increase logo size to match original
+- Update header layout structure
 
 ## Tasks
-- [ ] Update Header logo size
+- [x] Read current Header.tsx to understand layout
+- [x] Update header to center logo
+- [x] Adjust logo size to original dimensions
 - [ ] Save checkpoint
