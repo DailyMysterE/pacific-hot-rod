@@ -101,7 +101,7 @@ export default function Testimonials() {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <svg
                       key={i}
-                      className="w-4 h-4 text-primary"
+                      className="w-4 h-4 text-primary-light"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -115,7 +115,7 @@ export default function Testimonials() {
                   <h4 className="font-display text-base md:text-lg text-foreground font-semibold mb-1">
                     {testimonial.name}
                   </h4>
-                  <p className="text-base md:text-lg text-primary font-bold tracking-wide">
+                  <p className="text-base md:text-lg text-primary-light font-bold tracking-wide">
                     {testimonial.vehicle}
                   </p>
                 </div>
