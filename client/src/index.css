@@ -235,12 +235,13 @@
     font-weight: 900;
   }
   
-  /* Enhanced bold appearance for taglines */
+  /* Enhanced bold appearance for taglines - optimized for crisp rendering */
   .tagline-bold {
     font-weight: 900;
     letter-spacing: 0.05em;
-    -webkit-text-stroke: 0.8px currentColor;
-    paint-order: stroke fill;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   
   /* Darker royal blue for buttons only */
