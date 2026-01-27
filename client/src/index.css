@@ -7,7 +7,7 @@
  * DESIGN SYSTEM: Premium Blue & White
  * - Deep charcoal blacks (#0D0D0D) - automotive paint finish
  * - Pure white (#FFFFFF) - clean, modern accents
- * - Darker Royal Blue (oklch(0.45 0.20 265)) - premium, professional, trustworthy
+ * - Lighter Blue (oklch(0.62 0.18 265)) - premium, professional, trustworthy
  * - Typography: Oswald (headlines), Source Sans 3 (body)
  */
 
@@ -67,8 +67,8 @@
   --popover: oklch(0.12 0.008 250);
   --popover-foreground: oklch(0.98 0 0);
   
-  /* Darker Royal Blue - Primary (matches buttons) */
-  --primary: oklch(0.45 0.20 265);
+  /* Lighter Blue - Primary */
+  --primary: oklch(0.62 0.18 265);
   --primary-foreground: oklch(0.98 0 0);
   
   /* Pure White - Secondary */
@@ -88,10 +88,10 @@
   
   --border: oklch(0.25 0.01 250);
   --input: oklch(0.20 0.01 250);
-  --ring: oklch(0.45 0.20 265);
+  --ring: oklch(0.62 0.18 265);
   
   /* Chart colors */
-  --chart-1: oklch(0.45 0.20 265);
+  --chart-1: oklch(0.62 0.18 265);
   --chart-2: oklch(0.98 0 0);
   --chart-3: oklch(0.55 0.15 265);
   --chart-4: oklch(0.35 0.15 265);
@@ -114,7 +114,7 @@
   --card-foreground: oklch(0.98 0 0);
   --popover: oklch(0.12 0.008 250);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.45 0.20 265);
+  --primary: oklch(0.62 0.18 265);
   --primary-foreground: oklch(0.98 0 0);
   --secondary: oklch(0.98 0 0);
   --secondary-foreground: oklch(0.12 0.008 250);
@@ -126,15 +126,15 @@
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.25 0.01 250);
   --input: oklch(0.20 0.01 250);
-  --ring: oklch(0.45 0.20 265);
+  --ring: oklch(0.62 0.18 265);
   --sidebar: oklch(0.10 0.005 250);
   --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.45 0.20 265);
+  --sidebar-primary: oklch(0.62 0.18 265);
   --sidebar-primary-foreground: oklch(0.98 0 0);
   --sidebar-accent: oklch(0.18 0.01 250);
   --sidebar-accent-foreground: oklch(0.98 0 0);
   --sidebar-border: oklch(0.25 0.01 250);
-  --sidebar-ring: oklch(0.45 0.20 265);
+  --sidebar-ring: oklch(0.62 0.18 265);
 }
 
 @layer base {
