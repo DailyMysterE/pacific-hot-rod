@@ -24,6 +24,7 @@ export default function Contact() {
   const formCardRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '0px', amount: 0.1 });
   const [currentStep, setCurrentStep] = useState(1);
+  const isInitialMount = useRef(true);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -74,7 +75,11 @@ export default function Contact() {
 
   // Auto-scroll to form card when step changes (but not on initial load)
   useEffect(() => {
-    if (formCardRef.current && currentStep > 1) {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+    if (formCardRef.current) {
       formCardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }, [currentStep]);
