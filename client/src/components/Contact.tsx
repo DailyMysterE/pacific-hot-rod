@@ -372,7 +372,7 @@ export default function Contact() {
 
           {/* Info Text */}
           <p className="text-center text-sm text-foreground/50 mt-6">
-            We'll confirm availability and get back to you within 24 hours
+            We will do our best to get back to you within 24 hours!
           </p>
         </motion.div>
 
