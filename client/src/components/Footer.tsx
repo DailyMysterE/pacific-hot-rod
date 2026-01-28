@@ -17,9 +17,9 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-center text-center">
           {/* Logo */}
           <img 
-            src="/images/pacific-hot-rod-logo.c6d4e547.webp" 
+            src="/images/footer-logo.ae4fbac5.png" 
             alt="Pacific Hot Rod" 
-            className="h-12 md:h-16 w-auto mb-4"
+            className="h-32 md:h-40 lg:h-48 w-auto mb-6"
           />
           
           {/* Copyright */}
