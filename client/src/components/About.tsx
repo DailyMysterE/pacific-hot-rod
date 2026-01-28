@@ -32,7 +32,7 @@ export default function About() {
           >
             <div className="relative aspect-[4/3] overflow-hidden">
               <img
-                src="/images/shop-exterior.jpg"
+                src="/images/about-shopfront.c9a548de.png"
                 alt="Pacific Hot Rod restoration facility"
                 className="w-full h-full object-cover"
               />
