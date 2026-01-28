@@ -39,7 +39,7 @@ export default function Hero() {
             transition={{ duration: 0.2, delay: 0 }}
             className="inline-flex items-center gap-2 border-l-2 border-primary pl-3 mb-5 md:mb-6"
           >
-            <span className="text-[1rem] font-extrabold md:text-base md:font-black tracking-[0.03em] md:tracking-[0.15em] whitespace-nowrap bg-gradient-to-r from-[#FF8C42] to-[#FF6B35] bg-clip-text text-transparent">
+            <span className="text-[1rem] font-black md:text-base tracking-[0.03em] md:tracking-[0.15em] whitespace-nowrap bg-gradient-to-r from-[#FF8C42] to-[#FF6B35] bg-clip-text text-transparent">
               LANGLEY'S PREMIER RESTORATION SHOP
             </span>
           </motion.div>
