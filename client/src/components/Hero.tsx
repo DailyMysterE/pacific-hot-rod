@@ -39,7 +39,7 @@ export default function Hero() {
             transition={{ duration: 0.2, delay: 0 }}
             className="inline-flex items-center gap-2 border-l-2 border-primary pl-3 mb-5 md:mb-6"
           >
-            <span className="text-[1rem] font-extrabold md:text-base md:font-black tracking-[0.03em] md:tracking-[0.15em] whitespace-nowrap tagline-bold-silver">
+            <span className="text-[1rem] font-extrabold md:text-base md:font-black tracking-[0.03em] md:tracking-[0.15em] whitespace-nowrap text-primary">
               LANGLEY'S PREMIER RESTORATION SHOP
             </span>
           </motion.div>
