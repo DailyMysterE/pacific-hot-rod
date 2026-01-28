@@ -54,7 +54,11 @@ export default function Header() {
     <>
       {/* Header */}
       <header 
-        className="fixed top-0 left-0 right-0 z-50 bg-[#001a4d]"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          isScrolled 
+            ? 'bg-[oklch(0.06_0.005_250)]/90 backdrop-blur-xl border-b border-primary/10 shadow-2xl shadow-black/40' 
+            : 'bg-gradient-to-b from-black/60 to-transparent'
+        }`}
       >
         <div className="container">
           <nav className="flex items-center justify-between h-20 lg:h-24">
@@ -65,7 +69,7 @@ export default function Header() {
               className="relative z-10 group"
             >
               <img 
-                src="/images/pacific-hot-rod-logo.c1f6616e.webp" 
+                src="/images/pacific-hot-rod-logo.dce01dd8.webp" 
                 alt="Pacific Hot Rod" 
                 className="h-10 md:h-14 lg:h-16 w-auto transition-transform duration-300 group-hover:scale-105"
               />
