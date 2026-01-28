@@ -19,7 +19,7 @@ export default function Footer() {
           <img 
             src="/images/footer-logo.ae4fbac5.png" 
             alt="Pacific Hot Rod" 
-            className="h-32 md:h-40 lg:h-48 w-auto mb-6"
+            className="h-auto w-full max-w-[280px] md:max-w-[360px] lg:max-w-[440px] mb-6"
           />
           
           {/* Copyright */}
