@@ -24,7 +24,7 @@ export default function Footer() {
           
           {/* Copyright */}
           <p className="text-sm md:text-base text-foreground/50">
-            © 2026 Pacific Hot Rod. All Rights Reserved.
+            © 2026 Pacific Hot Rods. All Rights Reserved.
           </p>
         </div>
       </div>
