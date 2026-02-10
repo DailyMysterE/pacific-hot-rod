@@ -21,8 +21,10 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero-main.jpg"
+          src="/images/hero-main.webp"
           alt="Classic car restoration workshop"
+          width={1920}
+          height={1072}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.06_0.005_250)] via-[oklch(0.06_0.005_250)]/85 to-[oklch(0.06_0.005_250)]/40" />

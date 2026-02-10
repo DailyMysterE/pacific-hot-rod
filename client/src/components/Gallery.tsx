@@ -11,18 +11,18 @@ import { useRef, useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const galleryImages = [
-  { src: '/images/gallery_036_update.jpg', alt: 'Classic Mustang restoration' },
-  { src: '/images/gallery_035_update.jpg', alt: 'Classic Mustang side view' },
-  { src: '/images/gallery_037_update.jpg', alt: 'Classic muscle car matte blue' },
-  { src: '/images/gallery_034_update.jpg', alt: 'Chevrolet 454 SS truck' },
-  { src: '/images/gallery_033_update.jpg', alt: 'Chevrolet 454 SS front' },
-  { src: '/images/gallery_031.jpg', alt: 'Classic Chevrolet pickup' },
-  { src: '/images/gallery_026.jpg', alt: 'Vintage pickup body work' },
-  { src: '/images/gallery_025.jpg', alt: 'Classic truck primer stage' },
-  { src: '/images/gallery_013.jpg', alt: 'Classic Ford Galaxie' },
-  { src: '/images/gallery_003.jpg', alt: 'Chevrolet 454 SS paint booth' },
-  { src: '/images/gallery_001.jpg', alt: 'Classic truck black finish' },
-  { src: '/images/gallery_010.jpg', alt: 'Classic car restoration' },
+  { src: '/images/gallery_036_update.webp', alt: 'Classic Mustang restoration', width: 800, height: 600 },
+  { src: '/images/gallery_035_update.webp', alt: 'Classic Mustang side view', width: 800, height: 600 },
+  { src: '/images/gallery_037_update.webp', alt: 'Classic muscle car matte blue', width: 800, height: 600 },
+  { src: '/images/gallery_034_update.webp', alt: 'Chevrolet 454 SS truck', width: 800, height: 600 },
+  { src: '/images/gallery_033_update.webp', alt: 'Chevrolet 454 SS front', width: 800, height: 600 },
+  { src: '/images/gallery_031.webp', alt: 'Classic Chevrolet pickup', width: 800, height: 600 },
+  { src: '/images/gallery_026.webp', alt: 'Vintage pickup body work', width: 800, height: 600 },
+  { src: '/images/gallery_025.webp', alt: 'Classic truck primer stage', width: 800, height: 600 },
+  { src: '/images/gallery_013.webp', alt: 'Classic Ford Galaxie', width: 800, height: 600 },
+  { src: '/images/gallery_003.webp', alt: 'Chevrolet 454 SS paint booth', width: 800, height: 600 },
+  { src: '/images/gallery_001.webp', alt: 'Classic truck black finish', width: 800, height: 600 },
+  { src: '/images/gallery_010.webp', alt: 'Classic car restoration', width: 800, height: 600 },
 ];
 
 export default function Gallery() {
@@ -92,6 +92,9 @@ export default function Gallery() {
               <img
                 src={image.src}
                 alt={image.alt}
+                width={image.width}
+                height={image.height}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.06_0.005_250)] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -160,6 +163,8 @@ export default function Gallery() {
               <img
                 src={galleryImages[selectedImage].src}
                 alt={galleryImages[selectedImage].alt}
+                width={galleryImages[selectedImage].width}
+                height={galleryImages[selectedImage].height}
                 className="w-full h-full object-contain"
               />
             </motion.div>

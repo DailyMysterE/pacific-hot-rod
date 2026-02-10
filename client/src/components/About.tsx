@@ -32,8 +32,10 @@ export default function About() {
           >
             <div className="relative aspect-[4/3] overflow-hidden">
               <img
-                src="/images/about-shopfront.c9a548de.png"
+                src="/images/about-shopfront.c9a548de.webp"
                 alt="Pacific Hot Rod restoration facility"
+                width={1200}
+                height={900}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 border border-primary/10" />

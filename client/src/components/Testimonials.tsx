@@ -15,7 +15,9 @@ const testimonials = [
     name: 'Michael',
     vehicle: '1963 Chevrolet C10',
     review: 'Pacific Hot Rod transformed my C10 beyond my expectations. The attention to detail in the bodywork and paint is exceptional. They treated my truck like it was their own. Worth every penny.',
-    image: '/images/testimonial-1.jpg',
+    image: '/images/testimonial-1.webp',
+    width: 800,
+    height: 600,
     rating: 5
   },
   {
@@ -23,13 +25,17 @@ const testimonials = [
     vehicle: '1970 Chevrolet Chevelle SS',
     review: 'I brought my Chevelle to Pacific Hot Rod for a complete restoration. The team was professional, communicative, and delivered outstanding results. The car looks better than it did rolling off the factory floor.',
     image: '/images/testimonial-alice.f4f90cec6850b48a754467b88606e125.webp',
+    width: 800,
+    height: 600,
     rating: 5
   },
   {
     name: 'Robert',
     vehicle: '1968 Ford Mustang',
     review: 'After years of searching for the right shop, I found Pacific Hot Rod. Their craftsmanship is unmatched in the Lower Mainland. They brought my Mustang back to life with precision and care.',
-    image: '/images/testimonial-3.jpg',
+    image: '/images/testimonial-3.webp',
+    width: 800,
+    height: 600,
     rating: 5
   }
 ];
@@ -79,6 +85,9 @@ export default function Testimonials() {
                 <img
                   src={testimonial.image}
                   alt={testimonial.vehicle}
+                  width={testimonial.width}
+                  height={testimonial.height}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.08_0.005_250)] via-transparent to-transparent opacity-60" />
