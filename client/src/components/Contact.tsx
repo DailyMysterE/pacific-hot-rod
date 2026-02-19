@@ -387,7 +387,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="mailto:info@pacifichotrod.com"
+            href="mailto:jimy@pacifichotrod.com"
             className="flex items-center gap-5 text-foreground/80 hover:text-primary transition-all duration-300 group"
           >
             <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary/50 group-hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/10 flex-shrink-0">
@@ -395,7 +395,7 @@ export default function Contact() {
             </div>
             <div className="flex flex-col justify-center">
               <div className="text-xs md:text-sm tracking-widest text-foreground/50 font-display uppercase mb-1">EMAIL US</div>
-              <div className="text-lg md:text-xl lg:text-2xl font-semibold">info@pacifichotrod.com</div>
+              <div className="text-lg md:text-xl lg:text-2xl font-semibold">jimy@pacifichotrod.com</div>
             </div>
           </a>
 

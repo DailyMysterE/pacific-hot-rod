@@ -192,7 +192,7 @@ export default function Header() {
 
                     {/* Email */}
                     <a
-                      href="mailto:info@pacifichotrod.com"
+                      href="mailto:jimy@pacifichotrod.com"
                       className="w-14 h-14 flex items-center justify-center border border-white/20 hover:border-primary hover:bg-primary/10 text-white hover:text-primary transition-all duration-200"
                       aria-label="Email us"
                     >
