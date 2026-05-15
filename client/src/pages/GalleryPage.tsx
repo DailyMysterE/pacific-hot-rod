@@ -102,7 +102,7 @@ export default function GalleryPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.05 }}
-              className="text-foreground/60 text-lg max-w-xl"
+              className="text-foreground/60 text-lg max-w-none"
             >
               Every build tells a story. Browse our restorations, custom builds, and paint work.
             </motion.p>
