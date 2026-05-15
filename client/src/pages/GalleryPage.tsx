@@ -88,33 +88,7 @@ export default function GalleryPage() {
             </Link>
           </motion.div>
 
-          {/* Page Header */}
-          <div className="mb-12 md:mb-16">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="inline-block text-primary text-base font-black tracking-[0.3em] mb-4 tagline-bold"
-            >
-              OUR WORK
-            </motion.span>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.05 }}
-              className="font-display text-4xl md:text-6xl lg:text-7xl mb-4"
-            >
-              PROJECT <span className="text-primary">GALLERY</span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
-              className="text-foreground/60 text-lg max-w-xl"
-            >
-              Every build tells a story. Browse our completed restorations, custom builds, and paint work.
-            </motion.p>
-          </div>
+
 
 
 
@@ -141,11 +115,7 @@ export default function GalleryPage() {
                     loading="lazy"
                     className="w-full block transition-transform duration-500 group-hover:scale-105"
                   />
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-2 p-4">
-                    <span className="text-primary font-display text-xs tracking-[0.2em] uppercase">{img.category}</span>
-                    <p className="text-white text-center text-sm font-medium leading-snug">{img.alt}</p>
-                  </div>
+
                 </motion.div>
               ))}
             </AnimatePresence>
