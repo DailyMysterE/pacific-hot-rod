@@ -115,7 +115,7 @@ export default function Gallery() {
 
       {/* View All Projects Button */}
       <div className="relative z-10 flex justify-center mt-10 md:mt-14">
-        <Link href="/gallery" className="inline-flex items-center gap-3 font-display text-sm md:text-base tracking-[0.2em] uppercase border-2 border-primary text-primary px-10 py-4 hover:bg-primary hover:text-primary-foreground transition-all duration-300 group shadow-lg shadow-primary/10 hover:shadow-primary/30">
+        <Link href="/gallery" className="inline-flex items-center gap-3 font-display font-semibold text-sm md:text-base tracking-[0.15em] uppercase bg-primary text-primary-foreground px-10 py-4 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5 transition-all duration-300 group">
           VIEW ALL PROJECTS
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
         </Link>
