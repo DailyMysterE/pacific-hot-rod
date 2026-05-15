@@ -104,7 +104,7 @@ export default function GalleryPage() {
               transition={{ duration: 0.3, delay: 0.05 }}
               className="text-foreground/60 text-lg max-w-xl"
             >
-              Every build tells a story. Browse our completed restorations, custom builds, and paint work.
+              Every build tells a story. Browse our restorations, custom builds, and paint work.
             </motion.p>
           </div>
 
