@@ -195,10 +195,6 @@ export default function GalleryPage() {
                 alt={filtered[selectedIndex].alt}
                 className="max-h-[75vh] max-w-full object-contain shadow-2xl"
               />
-              <div className="text-center">
-                <span className="text-primary font-display text-xs tracking-[0.2em] uppercase mr-3">{filtered[selectedIndex].category}</span>
-                <span className="text-white/70 text-sm">{filtered[selectedIndex].alt}</span>
-              </div>
               <div className="text-white/30 font-display text-xs tracking-widest">
                 {selectedIndex + 1} / {filtered.length}
               </div>
