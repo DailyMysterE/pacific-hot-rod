@@ -88,9 +88,25 @@ export default function GalleryPage() {
             </Link>
           </motion.div>
 
-
-
-
+          {/* Page Header */}
+          <div className="mb-10 md:mb-14">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="font-display text-4xl md:text-6xl lg:text-7xl mb-4"
+            >
+              PROJECT <span className="text-primary">GALLERY</span>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.05 }}
+              className="text-foreground/60 text-lg max-w-xl"
+            >
+              Every build tells a story. Browse our completed restorations, custom builds, and paint work.
+            </motion.p>
+          </div>
 
           {/* Masonry-style Grid */}
           <motion.div
