@@ -30,15 +30,10 @@ const allImages = [
   { src: '/images/gallery_001.webp', alt: 'Classic truck black finish', category: 'Paint & Bodywork' },
 ];
 
-const categories = ['All', 'Restoration', 'Paint & Bodywork', 'Custom Build'];
-
 export default function GalleryPage() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [activeCategory, setActiveCategory] = useState('All');
 
-  const filtered = activeCategory === 'All'
-    ? allImages
-    : allImages.filter(img => img.category === activeCategory);
+  const filtered = allImages;
 
   const openLightbox = (index: number) => {
     setSelectedIndex(index);
@@ -121,30 +116,7 @@ export default function GalleryPage() {
             </motion.p>
           </div>
 
-          {/* Category Filters */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.15 }}
-            className="flex flex-wrap gap-3 mb-10 md:mb-14"
-          >
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => { setActiveCategory(cat); setSelectedIndex(null); }}
-                className={`font-display text-sm tracking-[0.15em] uppercase px-6 py-2.5 border-2 transition-all duration-200 ${
-                  activeCategory === cat
-                    ? 'bg-primary border-primary text-primary-foreground'
-                    : 'bg-transparent border-border/40 text-foreground/60 hover:border-primary/50 hover:text-foreground'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-            <span className="ml-auto self-center text-foreground/40 font-display text-sm tracking-widest">
-              {filtered.length} PROJECTS
-            </span>
-          </motion.div>
+
 
           {/* Masonry-style Grid */}
           <motion.div
