@@ -8,7 +8,8 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { Link } from 'wouter';
 
 const galleryImages = [
   { src: '/images/gallery_036_update.webp', alt: 'Classic Mustang restoration', width: 800, height: 600 },
@@ -110,6 +111,14 @@ export default function Gallery() {
             </motion.div>
           ))}
         </div>
+      </div>
+
+      {/* View All Projects Button */}
+      <div className="relative z-10 flex justify-center mt-10 md:mt-14">
+        <Link href="/gallery" className="inline-flex items-center gap-3 font-display text-sm md:text-base tracking-[0.2em] uppercase border-2 border-primary text-primary px-10 py-4 hover:bg-primary hover:text-primary-foreground transition-all duration-300 group shadow-lg shadow-primary/10 hover:shadow-primary/30">
+          VIEW ALL PROJECTS
+          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+        </Link>
       </div>
 
       {/* Lightbox */}

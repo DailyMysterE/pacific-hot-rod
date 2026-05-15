@@ -1,0 +1,35 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [],
+  "dev_command": "pnpm run dev",
+  "env_vars": {},
+  "experiments": null,
+  "git_remote": {
+    "repo_url": "s3://vida-prod-gitrepo/webdev-git/310519663314096192/HwMRuVstpi9QQ7KrjQVVxD",
+    "access_key_id": "ASIAZV3A2ECZETL4WTO3",
+    "secret_access_key": "w/CgzqAHONeMa4izTe6RCkLW3DYEKxL1bQMJZZ5D",
+    "session_token": "IQoJb3JpZ2luX2VjELf//////////wEaCXVzLWVhc3QtMSJIMEYCIQCQ5eOW8RoN1yvaEoZR9PmBMePy1FfSDpHZBxoSoX/eEQIhAN1899Cnkn2q99CFO7dX4hSvfiC+WWlJG46ebnGelO6ZKv8DCID//////////wEQBBoMNjY1Mzg2MDk4ODY2IgyYU5/ghZd4HrIgo3Eq0wN1i17TLQx90wJl+TfZI52TCMiy8h9rgqQrMbb8K/lNJ3hgMcOjkPElHTkHEr71kkMIRw2m7iQoxk/fNEUODiia3DJnoKQAIToqqUwg+BRweoWTXClYmL+Vu5ih0Vsz7IduTdxQd6A+xUy42TbTmsxiTTyi/SaWR6/y6bImrRSUoPm+VSfPD/vSf0z5jOK//BCcgedtqVL47a8nHaFgU52OOhz4VeSXUiwf1daFzEI6MT/85fsuJYTHlA6V3FTXs4sutDzegSoNQR4xoiVmS5Yd9kGIAAvkOULJdu60Iu4+bfJWWkWQzaRKePOu8rU2BdWMv3alEsWz4jiKDqb7WqwDzS2RoCIko7M148Cx/GETJcH5c4hldA7NTnUS5MeylsB+nUttfBXCrNNMOTXjIqgi0Rn/kJZU2OxSjwvEoBPpSPmbW2QX0QlO2WLkmtNlcfePTtz9DBYYZmVQK0SzCpd3vZtYzubaFYANk8l6rqLohPBbCYXFHhJS8Nt0Lq2iiFY03M84cAA8NZhaxIAyPaSdRfqRWdZIDalBo88UkoAVox1zU6EIvPKU879UfI/MvkMURpY3nT7AhSgIzHVOPuaZbEpvsSAYV/7C6GkB8CSWroX2YTDryZ7QBjqcAdgmE4dUaZWw7j7t/O6ZziGxhOQW/rXjjFkmIXQT1pMvmHWWrDqG1VaB5YzMRHBqCAsvca+LlGWYwd1UUtuSm493UBDXF5v57OCIaXJH+1ibIjF5Qb4KeNaFsLPjXY+WV0nhKs5+ZXFoXo/b6jV9fKxxgrStJPiR4E75dC18xzlw/9iNQKIgOA2ykpQVT4vBmC0e6gHzYKdSr/0cCg==",
+    "expiration": "2026-05-16T10:57:47.000Z"
+  },
+  "name": "pacific-hot-rod",
+  "path": "/home/ubuntu/pacific-hot-rod",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "Lr4fA79VBmSLr45KdYSpPs",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "jqPLHH5STraviZDEZFUzjH",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "vw.audi.dgnts",
+    "OWNER_OPEN_ID": "Dc99443qCLxJLEuhnCNMM2",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "62938bd8-f7ce-44a4-b0c9-809199ff60ab",
+    "VITE_APP_ID": "HwMRuVstpi9QQ7KrjQVVxD",
+    "VITE_APP_LOGO": "https://files.manuscdn.com/user_upload_by_module/web_dev_logo/310519663314096192/EsLkMDMjMSHGpicD.png",
+    "VITE_APP_TITLE": "Pacific Hot Rod",
+    "VITE_FRONTEND_FORGE_API_KEY": "ZnfBw5arPKYBpaLRTETvPS",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}
